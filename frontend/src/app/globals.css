@@ -3,20 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #D3CADE;
+  --foreground: #19161F;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { /* TODO: Make color scheme a var on toggle*/
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #19161F; /* Base background color */
+    --foreground: #EDE7EA;
+    --background-gradient: linear-gradient(
+      to bottom, 
+      rgba(128, 124, 177, 0) 0%, 
+      rgba(128, 124, 177, 0.16) 56%, 
+      rgba(128, 124, 177, 0.32) 100%
+    );
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  background-image: var(--background-gradient); /* Apply gradient */
+  background-repeat: no-repeat; /* Avoid repeating the gradient */
+  background-size: cover; /* Ensure the gradient covers the entire background */
   font-family: Arial, Helvetica, sans-serif;
 }
 

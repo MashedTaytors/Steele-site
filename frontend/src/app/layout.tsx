@@ -1,17 +1,38 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
+import { IBM_Plex_Serif, Source_Code_Pro } from 'next/font/google'; // Import Source Code Pro from Google Fonts
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Can delete /fonts 
+// // Local font configurations
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+
+// Google font configuration for IBM Plex Serif
+const ibmPlexSerif = IBM_Plex_Serif({
+  weight: ['400', '500', '600', '700'], // Specify the weights you need
+  subsets: ['latin'], // Specify the subsets you need
+  variable: '--font-ibm-plex-serif', // Optional: create a CSS variable for easy use
+  display: 'swap', // Use 'swap' for better loading behavior
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+// Google font configuration for Source Code Pro
+const sourceCodePro = Source_Code_Pro({
+  weight: ['400', '500', '600', '700'], // Specify the weights you need
+  subsets: ['latin'],
+  variable: '--font-source-code-pro', // Create a CSS variable for easy use
+  display: 'swap',
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibmPlexSerif.variable} ${sourceCodePro.variable}  antialiased`} // Include IBM Plex Serif variable
       >
         {children}
       </body>

@@ -12,6 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        ibmPlexSerif: ['var(--font-ibm-plex-serif)', 'serif'], // Define the custom font family
+        sourceCodePro: ['var(--font-source-code-pro)', 'monospace'], // Define the custom font family for Source Code Pro
+      },
     },
   },
   plugins: [],
