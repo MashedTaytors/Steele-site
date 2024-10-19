@@ -1,9 +1,11 @@
 import Footer from "@/components/footer";
+import React from "react";
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen p-4 sm:p-8 pb-20 gap-8 sm:gap-16 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col md:flex-row w-full gap-16 lg:px-96 gap-8 ">
+    <div className="flex flex-col items-center justify-between min-h-screen sm:gap-16 p-8 gap-8 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col container md:flex-row gap-16 lg:gap-8 ">
         <div className="flex flex-col gap-3 w-full md:w-1/2">
           <h1 className="text-3xl font-ibmPlexSerif sm:text-4xl lg:text-5xl">Taylor Steele</h1>
           <h2 className="text-xl font-sourceCodePro sm:text-2xl">Dynamic Web Professional</h2>
