@@ -11,6 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        primaryText: "var(--primary-text)",
+        secondaryText: "var(--secondary-text)",
+        tertiaryText: "var(--tertiary-text)",
+      },
+      width: {
+        'content': 'min(1264px, 90%)',
       },
       fontFamily: {
         ibmPlexSerif: ['var(--font-ibm-plex-serif)', 'serif'], // Define the custom font family
