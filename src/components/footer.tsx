@@ -43,9 +43,8 @@ const Footer: React.FC = () => {
           <ThemeToggle />
 
       </div>
-      <div className="lg:w-1/2">
-
-      </div>
+      {/* empty column for layout */}
+      <div className="lg:w-1/2"></div>
     </footer>
   );
 };
