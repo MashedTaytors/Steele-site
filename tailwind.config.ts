@@ -17,7 +17,7 @@ const config: Config = {
         tertiaryText: "var(--tertiary-text)",
       },
       width: {
-        'content': 'min(1264px, 90%)',
+        'content': 'min(1200px, 90%)',
       },
       fontFamily: {
         ibmPlexSerif: ['var(--font-ibm-plex-serif)', 'serif'], // Define the custom font family

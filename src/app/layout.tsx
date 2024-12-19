@@ -3,19 +3,6 @@ import type { Metadata } from "next";
 import { IBM_Plex_Serif, Source_Code_Pro } from 'next/font/google'; // Import Source Code Pro from Google Fonts
 import "./globals.css";
 
-// Can delete /fonts 
-// // Local font configurations
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 // Google font configuration for IBM Plex Serif
 const ibmPlexSerif = IBM_Plex_Serif({
@@ -47,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexSerif.variable} ${sourceCodePro.variable}  antialiased`} // Include IBM Plex Serif variable
+        className={`${ibmPlexSerif.variable} ${sourceCodePro.variable}  antialiased`} // Include font variables antialiased
       >
         {children}
       </body>

@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen sm:gap-16 p-10 gap-8 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col items-center justify-between min-h-screen sm:gap-16 p-32 gap-8 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col w-content md:flex-row gap-16 lg:gap-8 ">
         <div className="flex flex-col gap-4 w-full md:w-1/2">
           <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold sm:text-4xl lg:text-5xl">Taylor Steele</h1>
@@ -24,9 +24,6 @@ export default function Home() {
           <p>
             I am adept at adapting to new tools and technologies, which enables me to remain competitive in Sdynamic work environments. My skill set is complemented by strong interpersonal attributes such as adaptability, self-motivation, and emotional intelligence, making me a reliable and accountable team member.
           </p>
-        
-        
-       
         
         
         </div>
