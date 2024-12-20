@@ -7,14 +7,14 @@ export default function Home() {
     <div className="flex flex-col items-center justify-between min-h-screen sm:gap-16 p-32 gap-8 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col w-content md:flex-row gap-16 lg:gap-8 ">
         <div className="flex flex-col gap-4 w-full md:w-1/2">
-          <h1 className="text-3xl font-montserrat text-primaryText font-semibold sm:text-4xl lg:text-6xl">Taylor Steele</h1>
-          <h2 className="text-xl font-montserrat text-primaryText sm:text-2xl">Dynamic Web Professional</h2>
-          <p className="font-metrophobic text-xl text-secondaryText font-light sm:pr-20 lg:pr-48">
+          <h1 className="text-3xl font-ibm-plex-serif text-primaryText font-semibold sm:text-4xl lg:text-6xl">Taylor Steele</h1>
+          <h2 className="text-xl font-source-code-pro text-primaryText sm:text-2xl">Dynamic Web Professional</h2>
+          <p className="text-xl font-source-code-pro text-secondaryText font-light sm:pr-20 lg:pr-48">
             Experienced Web Developer delivering innovative and reliable digital solutions.
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 text-xl font-metrophobic text-secondaryText w-full md:w-1/2">
+        <div className="flex flex-col gap-3 text-xl font-source-code-pro text-secondaryText w-full md:w-1/2">
           <p>
             I am a dedicated and detail-oriented Web Developer with expertise in both front and back-end development. With a background in Digital Marketing Technology and a minor in Computer Science, I combine technical knowledge with marketing insight to deliver web solutions that are not only functional but also optimized for performance and SEO.
           </p>

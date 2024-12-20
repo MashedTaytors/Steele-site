@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class", // Enable class-based dark mode
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -19,10 +20,10 @@ const config: Config = {
       width: {
         'content': 'min(1200px, 90%)',
       },
-      fontFamily: {
-        montserrat: ['Montserrat', 'serif'],
-        metrophobic: ['Metrophobic', 'sans-serif'],
-        scada: ['Scada', 'sans-serif'],
+      // TODO: fix fonts
+      fontFamily: { 
+        ibmPlexSerif: ['"IBM Plex Serif"', "serif"], // Use IBM Plex Serif
+        sourceCodePro: ['"Source Code Pro"', "monospace"], // Use Source Code Pro
       },
     },
   },

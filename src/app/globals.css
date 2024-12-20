@@ -3,49 +3,52 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* TODO: fix fonts */
 :root {
   font-size: 16px;
-  --font-ibm-plex-serif: "IBM Plex Serif", serif;
-  --font-source-code-pro: "Source Code Pro", sans-serif;
-  --primary-text: var(--misty-rose);
-  --secondary-text: var(--pale-lilac);
-  --icons: var(--muted-periwinkle);
-  --background: #19161f; /* Base background color */
-  --foreground: #ede7ea;
-  --background-gradient: linear-gradient(
-    to bottom,
-    rgba(128, 124, 177, 0) 0%,
-    rgba(128, 124, 177, 0.16) 56%,
-    rgba(128, 124, 177, 0.32) 100%
-  );
-  --midnight-indigo: #1f223e;
-  --slate-grey: #58546b;
-  --muted-periwinkle: #807cb1;
-  --lavender-grey: #ada1c5;
-  --pale-lilac: #d3cade;
-  --misty-rose: #ede7ea;
-}
+    --font-ibm-plex-serif: "IBM Plex Serif", serif;
+    --font-source-code-pro: "Source Code Pro", sans-serif;
+  /* Primitave colors */
+    --midnight-indigo: #1f223e;
+    --slate-grey: #58546b;
+    --muted-periwinkle: #807cb1;
+    --lavender-grey: #ada1c5;
+    --pale-lilac: #d3cade;
+    --misty-rose: #ede7ea;
+    --gunmetal-purple:#19161f;
 
-.light body {
-  --background: #fffffe;
-  --foreground: #1f223e;
+  /* Tokens */
   --primary-text: var(--foreground);
-  --secondary-text: var(--slate-grey);
-  --icons: var(--slate-grey);
-  --background-gradient: linear-gradient(
-  to bottom, 
-  rgba(218, 166, 155, 0) 0%, 
-  rgba(218, 166, 155, 0.16) 56%, 
-  rgba(218, 166, 155, 0.32) 100%
-);
 
-
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.dark body {
-  transition: background 0.3s ease, color 0.3s ease;
+[data-theme="light"] {
+  --background: var(--misty-rose);
+  --foreground: var(--gunmetal-purple);
+    --secondary-text: var(--slate-grey);
+    --icons: var(--slate-grey);
+    /* --background-gradient: linear-gradient(
+      to bottom, 
+      rgba(218, 166, 155, 0) 0%, 
+      rgba(218, 166, 155, 0.16) 56%, 
+      rgba(218, 166, 155, 0.32) 100%
+    ); */
 }
+
+[data-theme="dark"] {
+  --background: #19161f; 
+  --foreground: var(--misty-rose);
+    --secondary-text: var(--pale-lilac);
+    --icons: var(--muted-periwinkle);
+    /* --background-gradient: linear-gradient(
+      to bottom,
+      rgba(128, 124, 177, 0) 0%,
+      rgba(128, 124, 177, 0.16) 56%,
+      rgba(128, 124, 177, 0.32) 100%
+    ); */
+}
+
+
 
 body {
   color: var(--foreground);
@@ -53,7 +56,8 @@ body {
   background-image: var(--background-gradient); /* Apply gradient */
   background-repeat: no-repeat; /* Avoid repeating the gradient */
   background-size: cover; /* Ensure the gradient covers the entire background */
-  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 

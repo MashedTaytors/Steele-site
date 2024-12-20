@@ -1,46 +1,51 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/Brightness3';
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+  return null;
+}
+
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${value}; expires=${expires}; path=/; sameSite=lax; secure=${process.env.NODE_ENV === 'production'}`;
+}
 
 function ThemeToggle() {
-  // Initialize theme state based on localStorage value (default is dark mode)
-  const [isLightMode, setIsLightMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') === 'light';
-    }
-    return false;
-  });
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const root = document.documentElement;
-    
-    // Prevent transition on initial load
-    root.classList.add('no-transition');
-    setTimeout(() => {
-      root.classList.remove('no-transition'); // Remove immediately after first render
-    }, 15);
-
-    // Apply theme based on `isLightMode` state
-    if (isLightMode) {
-      root.classList.add('light');
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light'); // Save preference to localStorage
-    } else {
-      root.classList.remove('light');
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark'); // Save preference to localStorage
+    const cookieTheme = getCookie('theme');
+    if (cookieTheme) {
+      setTheme(cookieTheme);
     }
-  }, [isLightMode]);
+  }, []);
 
-  // Toggle theme and update state
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    setCookie('theme', theme, 30); // Set cookie to expire in 30 days
+  }, [theme]);
+
   const toggleTheme = () => {
-    setIsLightMode((prevMode) => !prevMode);
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+
+   console.log('Client-side theme cookie:', theme); // TODO: Debounce this
   };
 
+
   return (
-    <button onClick={toggleTheme} aria-label="Toggle light/dark mode">
-      <LightModeIcon style={{ fontSize: '41px', color: 'var(--icons)' }} />
+    <button onClick={toggleTheme} aria-label="Toggle theme">
+      {theme === 'light' ? (
+        <DarkModeIcon style={{ fontSize: '40px', color: 'var(--icons)' }} />
+      ) : (
+        <LightModeIcon style={{ fontSize: '40px', color: 'var(--icons)' }} />
+      )}
     </button>
   );
 }
