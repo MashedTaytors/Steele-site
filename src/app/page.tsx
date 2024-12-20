@@ -4,12 +4,12 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen sm:gap-16 p-32 gap-8">
+    <div className="flex flex-col items-center justify-between min-h-screen gap-16 py-16">
       <main className="flex flex-col w-content md:flex-row gap-16 lg:gap-8 ">
         <div className="flex flex-col gap-4 w-full md:w-1/2">
-          <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold sm:text-4xl lg:text-5xl">Taylor Steele</h1>
-          <h2 className="text-lg font-sourceCodePro text-primaryText sm:text-xl">Dynamic Web Professional</h2>
-          <p className="text-base leading-relaxed font-sourceCodePro text-secondaryText font-light sm:pr-20 lg:pr-48">
+          <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold md:text-3xl lg:text-4xl">Taylor Steele</h1>
+          <h2 className="text-xl font-sourceCodePro text-primaryText md:text-2xl ">Dynamic Web Professional</h2>
+          <p className="text-base pr-20 leading-relaxed font-sourceCodePro text-secondaryText font-light md:pr-0 lg:pr-48">
             Experienced Web Developer delivering innovative and reliable digital solutions.
           </p>
         </div>

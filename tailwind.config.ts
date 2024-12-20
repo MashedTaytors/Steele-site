@@ -20,7 +20,6 @@ const config: Config = {
       width: {
         'content': 'min(1200px, 90%)',
       },
-      // TODO: fix fonts
       fontFamily: { 
         ibmPlexSerif: ['var(--font-ibm-plex-serif)', 'serif'],
         sourceCodePro: ['var(--font-source-code-pro)', 'monospace'],
