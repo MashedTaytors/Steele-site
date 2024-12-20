@@ -57,8 +57,7 @@ body {
   background-repeat: no-repeat; /* Avoid repeating the gradient */
   background-size: cover; /* Ensure the gradient covers the entire background */
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: Arial, Helvetica, sans-serif;
-
+  /* font-family: var(--font-source-code-pro), Arial, Helvetica, sans-serif; */
 }
 
 @layer utilities {

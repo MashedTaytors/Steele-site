@@ -22,8 +22,8 @@ const config: Config = {
       },
       // TODO: fix fonts
       fontFamily: { 
-        ibmPlexSerif: ['"IBM Plex Serif"', "serif"], // Use IBM Plex Serif
-        sourceCodePro: ['"Source Code Pro"', "monospace"], // Use Source Code Pro
+        ibmPlexSerif: ['var(--font-ibm-plex-serif)', 'serif'],
+        sourceCodePro: ['var(--font-source-code-pro)', 'monospace'],
       },
     },
   },

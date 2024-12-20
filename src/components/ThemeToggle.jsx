@@ -34,8 +34,7 @@ function ThemeToggle() {
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-
-   console.log('Client-side theme cookie:', theme); // TODO: Debounce this
+  //  console.log('Client-side theme cookie:', theme); // TODO: Debounce this
   };
 
 
