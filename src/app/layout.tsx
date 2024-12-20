@@ -7,7 +7,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-ibm-plex-serif",
-  display: "swap",
+  display: "swap", //swap the css versions of the font with the next/font version - this allows for tailwind declaration
 });
 
 const sourceCodePro = Source_Code_Pro({
