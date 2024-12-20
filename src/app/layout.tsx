@@ -8,7 +8,7 @@ import "./globals.css";
 const ibmPlexSerif = IBM_Plex_Serif({
   weight: ['400', '500', '600', '700'], // Specify the weights you need
   subsets: ['latin'], // Specify the subsets you need
-  variable: '--font-ibm-plex-serif', // Optional: create a CSS variable for easy use
+  variable: '--font-montserrat', // Optional: create a CSS variable for easy use
   display: 'swap', // Use 'swap' for better loading behavior
 });
 
@@ -16,7 +16,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 const sourceCodePro = Source_Code_Pro({
   weight: ['400', '500', '600', '700'], // Specify the weights you need
   subsets: ['latin'],
-  variable: '--font-source-code-pro', // Create a CSS variable for easy use
+  variable: '--font-metrophobic', // Create a CSS variable for easy use
   display: 'swap',
 });
 

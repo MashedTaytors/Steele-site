@@ -20,8 +20,9 @@ const config: Config = {
         'content': 'min(1200px, 90%)',
       },
       fontFamily: {
-        ibmPlexSerif: ['var(--font-ibm-plex-serif)', 'serif'], // Define the custom font family
-        sourceCodePro: ['var(--font-source-code-pro)', 'monospace'], // Define the custom font family for Source Code Pro
+        montserrat: ['Montserrat', 'serif'],
+        metrophobic: ['Metrophobic', 'sans-serif'],
+        scada: ['Scada', 'sans-serif'],
       },
     },
   },
