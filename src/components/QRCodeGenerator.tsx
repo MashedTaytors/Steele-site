@@ -27,8 +27,7 @@ const QRCodeGenerator: React.FC = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "20px" }}>
       <h2>QR Code Generator</h2>
-      <input
-        type="text"
+      <input type="text" className="p-3 rounded-md border border-opacity-40 border-foreground bg-transparent focus:outline-none"
         placeholder="Enter text or URL"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
