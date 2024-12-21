@@ -11,25 +11,33 @@ function getCookie(name) {
   return null;
 }
 
-
 function setCookie(name, value, days) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
-  document.cookie = `${name}=${value}; expires=${expires}; path=/; sameSite=lax; secure=${process.env.NODE_ENV === 'production'}`;
+  document.cookie = `${name}=${value}; expires=${expires}; path=/; sameSite=lax; secure=${process.env.NODE_ENV === 'production'}`; // "path=/" makes the cookie accessible to all URLs that start with / on your domain.
 }
 
 function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(''); // Initialize with an empty string to prevent overwrites
 
+  // Set theme based on the cookie during the first render
   useEffect(() => {
     const cookieTheme = getCookie('theme');
     if (cookieTheme) {
-      setTheme(cookieTheme);
+      setTheme(cookieTheme); // Use the cookie theme if it exists
+    } else {
+      setTheme('light'); // Default theme if no cookie exists
     }
   }, []);
 
+  // Update cookie and DOM only when the theme changes
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    setCookie('theme', theme, 30); // Set cookie to expire in 30 days
+    if (theme) { // Only act if the theme has been initialized
+      const cookieTheme = getCookie('theme');
+      if (cookieTheme !== theme) {
+        setCookie('theme', theme, 30); // Only set the cookie if the theme differs
+      }
+      document.documentElement.dataset.theme = theme; // Sync theme to the DOM
+    }
   }, [theme]);
 
   const toggleTheme = () => {
