@@ -25,59 +25,62 @@ const QRCodeGenerator: React.FC = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
-      <h2>QR Code Generator</h2>
-      <input type="text" className="p-3 rounded-md border border-opacity-40 border-foreground bg-transparent focus:outline-none"
-        placeholder="Enter text or URL"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-        style={{
-          padding: "10px",
-          width: "300px",
-          marginBottom: "20px",
-          fontSize: "16px",
-        }}
-      />
-      <br />
-      <button
-        onClick={handleGenerateQRCode}
-        style={{
-          padding: "10px 20px",
-          fontSize: "16px",
-          cursor: "pointer",
-          backgroundColor: "#0070f3",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          marginRight: "10px",
-        }}
-      >
-        Generate QR Code
-      </button>
-      <button
-        onClick={handleDownloadQRCode}
-        disabled={!qrCodeValue}
-        style={{
-          padding: "10px 20px",
-          fontSize: "16px",
-          cursor: qrCodeValue ? "pointer" : "not-allowed",
-          backgroundColor: qrCodeValue ? "#0070f3" : "#ccc",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-        }}
-      >
-        Download QR Code
-      </button>
-      <div style={{ marginTop: "30px" }} ref={qrCodeRef}>
-        {qrCodeValue && (
-          <QRCodeCanvas
-            value={qrCodeValue}
-            size={256}
-            style={{ margin: "20px" }}
-          />
-        )}
-      </div>
+    <div className="flex flex-row rounded-lg border border-solid border-foreground bg-transparent p-12">
+        <div className="flex flex-col">
+            <input type="text" className="p-3 rounded-md border border-opacity-40 border-foreground bg-transparent focus:outline-none"
+                placeholder="Enter URL"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                style={{
+                width: "300px",
+                marginBottom: "20px",
+                fontSize: "16px",
+                }}
+            />
+            <br />
+            <button
+                onClick={handleGenerateQRCode}
+                style={{
+                padding: "10px 20px",
+                fontSize: "16px",
+                cursor: "pointer",
+                backgroundColor: "#0070f3",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                marginRight: "10px",
+                }}
+            >
+                Generate QR Code
+            </button>
+        </div>
+        <div className="flex flex-col">
+            <div style={{ marginTop: "30px" }} ref={qrCodeRef}>
+                {qrCodeValue && (
+                <QRCodeCanvas
+                    value={qrCodeValue}
+                    size={256}
+                    style={{ margin: "20px" }}
+                />
+                )}
+            </div>
+            <button
+                onClick={handleDownloadQRCode}
+                disabled={!qrCodeValue}
+                style={{
+                padding: "10px 20px",
+                fontSize: "16px",
+                cursor: qrCodeValue ? "pointer" : "not-allowed",
+                backgroundColor: qrCodeValue ? "#0070f3" : "#ccc",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                }}
+            >
+                Download QR Code
+            </button>
+        </div>
+
     </div>
   );
 };
