@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import React from "react";
 import Link from "next/link";
 
@@ -26,8 +25,6 @@ export default function Tools() {
         
         
         </div>
-
-
 
       </main>
 
