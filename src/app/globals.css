@@ -7,6 +7,7 @@
   font-size: 16px;
     --font-ibm-plex-serif: "IBM Plex Serif", serif;
     --font-source-code-pro: "Source Code Pro", sans-serif;
+
   /* Primitave colors */
     --midnight-indigo: #1f223e;
     --slate-grey: #58546b;
@@ -18,33 +19,38 @@
 
   /* Tokens */
   --primary-text: var(--foreground);
-
+  --button-bg-color: var(--button);
+  --button-text-color: var(--button-text);
 }
 
-[data-theme="light"] {
+[data-theme="light"] { /* all colors */
   --background: var(--misty-rose);
+  --button: #FFF;
+  --button-text: #000;
   --foreground: var(--gunmetal-purple);
     --secondary-text: var(--slate-grey);
     --icons: var(--slate-grey);
-    /* --background-gradient: linear-gradient(
+    --background-gradient: linear-gradient(
       to bottom, 
       rgba(218, 166, 155, 0) 0%, 
-      rgba(218, 166, 155, 0.16) 56%, 
-      rgba(218, 166, 155, 0.32) 100%
-    ); */
+      rgba(218, 166, 155, 0.05) 56%, 
+      rgba(218, 166, 155, 0.15) 100%
+    );
 }
 
-[data-theme="dark"] {
+[data-theme="dark"] { /* all colors */
   --background: #19161f; 
+  --button: #000;
+  --button-text: #FFF;
   --foreground: var(--misty-rose);
     --secondary-text: var(--pale-lilac);
     --icons: var(--muted-periwinkle);
-    /* --background-gradient: linear-gradient(
+    --background-gradient: linear-gradient(
       to bottom,
       rgba(128, 124, 177, 0) 0%,
       rgba(128, 124, 177, 0.16) 56%,
       rgba(128, 124, 177, 0.32) 100%
-    ); */
+    );
 }
 
 
@@ -56,7 +62,6 @@ body {
   background-repeat: no-repeat; /* Avoid repeating the gradient */
   background-size: cover; /* Ensure the gradient covers the entire background */
   transition: background-color 0.3s ease, color 0.3s ease;
-  /* font-family: var(--font-source-code-pro), Arial, Helvetica, sans-serif; */
 }
 
 @layer utilities {

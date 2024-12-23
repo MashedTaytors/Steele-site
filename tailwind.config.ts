@@ -12,7 +12,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-
+        buttonBg: "var(--button-bg-color)",
+        buttonText: "var(--button-text-color)",
         primaryText: "var(--primary-text)",
         secondaryText: "var(--secondary-text)",
         tertiaryText: "var(--tertiary-text)",

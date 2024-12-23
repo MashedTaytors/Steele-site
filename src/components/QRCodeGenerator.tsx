@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 
@@ -25,64 +25,58 @@ const QRCodeGenerator: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row rounded-lg border border-solid border-foreground bg-transparent p-12">
-        <div className="flex flex-col">
-            <input type="text" className="p-3 rounded-md border border-opacity-40 border-foreground bg-transparent focus:outline-none"
-                placeholder="Enter URL"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                style={{
-                width: "300px",
-                marginBottom: "20px",
-                fontSize: "16px",
-                }}
+    <div className="flex flex-row h-96 justify-between rounded-lg bg-transparent p-12 border border-solid border-gray-500 border-opacity-40">
+      <div className="flex flex-col gap-2">
+        <input
+          type="text"
+          className="p-3 w-72 rounded-md border border-gray-500 border-opacity-40 bg-transparent focus:outline-none"
+          placeholder="Enter URL"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <br />
+        <button
+          className=""
+          onClick={handleGenerateQRCode}
+          style={{
+            padding: "10px 20px",
+            cursor: "pointer",
+            backgroundColor: "#0070f3",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            marginRight: "10px",
+          }}
+        >
+          Generate QR Code
+        </button>
+      </div>
+      <div className="flex flex-col h-96 items-center gap-2">
+        <div ref={qrCodeRef}>
+          {qrCodeValue && (
+            <QRCodeCanvas
+              value={qrCodeValue}
+              size={160}
+              style={{ margin: "20px" }}
             />
-            <br />
-            <button
-                onClick={handleGenerateQRCode}
-                style={{
-                padding: "10px 20px",
-                fontSize: "16px",
-                cursor: "pointer",
-                backgroundColor: "#0070f3",
-                color: "white",
-                border: "none",
-                borderRadius: "5px",
-                marginRight: "10px",
-                }}
-            >
-                Generate QR Code
-            </button>
+          )}
         </div>
-        <div className="flex flex-col">
-            <div style={{ marginTop: "30px" }} ref={qrCodeRef}>
-                {qrCodeValue && (
-                <QRCodeCanvas
-                    value={qrCodeValue}
-                    size={256}
-                    style={{ margin: "20px" }}
-                />
-                )}
-            </div>
-            <button
-                onClick={handleDownloadQRCode}
-                disabled={!qrCodeValue}
-                style={{
-                padding: "10px 20px",
-                fontSize: "16px",
-                cursor: qrCodeValue ? "pointer" : "not-allowed",
-                backgroundColor: qrCodeValue ? "#0070f3" : "#ccc",
-                color: "white",
-                border: "none",
-                borderRadius: "5px",
-                }}
-            >
-                Download QR Code
-            </button>
-        </div>
-
+        <button
+          onClick={handleDownloadQRCode}
+          disabled={!qrCodeValue}
+          className={`${
+            qrCodeValue ? "block" : "hidden"
+          } px-4 py-2 text-buttonText rounded-md ${
+            qrCodeValue ? "bg-buttonBg cursor-pointer" : "bg-gray-400"
+          }`}
+        >
+          Download QR Code
+        </button>
+      </div>
     </div>
   );
 };
+
+// TODO: Don't let users add non-URLs (maybe validate URLs)
 
 export default QRCodeGenerator;
