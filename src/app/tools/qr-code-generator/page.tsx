@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "@/components/footer";
 import QRCodeGenerator from "@/components/QRCodeGenerator";
 
 // TODO: Style and create a unique layout for /tools/
