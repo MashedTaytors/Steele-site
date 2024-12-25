@@ -17,7 +17,7 @@ export default function Projects() {
            <div className="flex flex-col gap-3">
             <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold">What&apos;s cookin&apos;</h1>
             <p className="text-sm leading-relaxed text-primaryText">
-            Here’s where I keep the things I’ve been working on — projects from the past (coming soon) and ideas I’m currently exploring. It’s all about continuous learning, growing, and building along the way.
+            Here&apos;s where I keep the things I&apos;ve been working on — projects from the past (coming soon) and ideas I&apos;m currently exploring. It&apos;s all about continuous learning, growing, and building along the way.
             </p>
           </div>
 
@@ -25,7 +25,7 @@ export default function Projects() {
           <div className="flex flex-col gap-3"> 
             <h2 className="font-ibmPlexSerif text-xl text-primaryText">Tools</h2>
             <p className="text-xs leading-relaxed text-secondaryText">
-            These are tools I’ve put together to address everyday challenges. They’re built with usability in mind and designed to make life just a little bit easier.
+            These are tools I&apos;ve put together to address everyday challenges. They&apos;re built with usability in mind and designed to make life just a little bit easier.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function Projects() {
           <div className="flex flex-col gap-3">
             <h3 className="font-ibmPlexSerif text-sm text-primaryText">QR Code Generator</h3>
             <p className="text-xs leading-relaxed text-secondaryText">
-            A simple tool to generate QR codes. Enter a URL, click "Generate," and you’re good to go.
+            A simple tool to generate QR codes. Enter a URL, click "Generate," and you&apos;re good to go.
             </p>
             <QRCodeGenerator />
           </div>
