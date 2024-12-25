@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import QRCodeGenerator from "@/components/qr-generator";
-import ResolvingViewport from 'next/dist/lib/metadata/types/metadata-interface.js';
 
 export const metadata: Metadata = {
   title: "Projects | Web Developer",
