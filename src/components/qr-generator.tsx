@@ -2,15 +2,23 @@
 import React, { useState, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 
-// TODO: annotate
+
 const QRCodeGenerator: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [qrCodeValue, setQrCodeValue] = useState<string>("");
   const qrCodeRef = useRef<HTMLDivElement>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleGenerateQRCode = (): void => {
-    setQrCodeValue(inputValue);
+    try {
+      new URL(inputValue);
+      setQrCodeValue(inputValue);
+      setErrorMessage(""); // Clear any previous error
+    } catch {
+      setErrorMessage("Invalid URL. Please try again.");
+    }
   };
+  
 
   const handleDownloadQRCode = (): void => {
     if (qrCodeRef.current) {
@@ -25,46 +33,41 @@ const QRCodeGenerator: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row h-96 justify-between rounded-lg bg-transparent p-12 border border-solid border-gray-500 border-opacity-40">
-      <div className="flex flex-col gap-2">
+    <div className="flex flex-col h-72 w-full justify-between rounded-lg bg-transparent border border-solid border-gray-500 border-opacity-40 lg:flex-row">
+      <div className="flex flex-col gap-2 p-8">
+        <label className="font-sourceCodePro"> Enter QR destination:</label>
         <input
-          type="text"
-          className="p-3 w-72 rounded-md border border-gray-500 border-opacity-40 bg-transparent focus:outline-none"
+          className="p-3 w-full rounded-md border border-white border-opacity-40 bg-transparent font-sourceCodePro focus:outline-none focus:border-opacity-100 lg:w-72"
+          type="url"
           placeholder="Enter URL"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <br />
         <button
-          className=""
+          className="px-4 py-2 font-sourceCodePro cursor-pointer bg-buttonBg text-buttonText rounded-md"
           onClick={handleGenerateQRCode}
-          style={{
-            padding: "10px 20px",
-            cursor: "pointer",
-            backgroundColor: "#0070f3",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            marginRight: "10px",
-          }}
         >
           Generate QR Code
         </button>
+        {errorMessage && (
+        <div className="text-red-500 text-sm mt-2">{errorMessage}</div>
+      )}
       </div>
-      <div className="flex flex-col h-96 items-center gap-2">
+      <div className="flex flex-col w-1/2 items-center gap-2 border-l border-gray-500 border-opacity-40 p-8">
+        <h3 className="font-sourceCodePro"> </h3>
         <div ref={qrCodeRef}>
           {qrCodeValue && (
             <QRCodeCanvas
               value={qrCodeValue}
               size={160}
-              style={{ margin: "20px" }}
             />
           )}
         </div>
         <button
           onClick={handleDownloadQRCode}
           disabled={!qrCodeValue}
-          className={`${
+          className={`font-sourceCodePro ${
             qrCodeValue ? "block" : "hidden"
           } px-4 py-2 text-buttonText rounded-md ${
             qrCodeValue ? "bg-buttonBg cursor-pointer" : "bg-gray-400"

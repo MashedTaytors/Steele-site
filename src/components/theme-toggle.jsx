@@ -2,7 +2,9 @@
 
 import React, { useEffect, useState } from 'react';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/Brightness3';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+
+// TODO: on light theme full page load, the wrong toggle icon flashes
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
@@ -49,9 +51,9 @@ function ThemeToggle() {
   return (
     <button onClick={toggleTheme} aria-label="Toggle theme">
       {theme === 'light' ? (
-        <DarkModeIcon style={{ fontSize: '40px', color: 'var(--icons)' }} />
+        <DarkModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
       ) : (
-        <LightModeIcon style={{ fontSize: '40px', color: 'var(--icons)' }} />
+        <LightModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
       )}
     </button>
   );

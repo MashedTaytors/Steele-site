@@ -8,10 +8,10 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
     {
-      name: 'Tools',
-      href: '/tools/'
+      name: 'Projects',
+      href: '/projects/'
     },
-    { name: 'QR Code Generator', href: '/tools/qr-code-generator'},
+    { name: 'QR Code Generator', href: '/projects/qr-generator'},
   ];
 
   export default function NavLinks() { 
