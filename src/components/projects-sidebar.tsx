@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
+// TODO: make stack on mobile 
+
 const links = [
     {
         name: 'Projects',

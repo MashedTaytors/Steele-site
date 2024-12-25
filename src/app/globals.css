@@ -27,7 +27,7 @@
 
 [data-theme="light"] { /* all colors */
   --background: var(--misty-rose);
-  --button: #FFF;
+  --button: var(--pale-lilac);
   --button-text: #000;
   --foreground: var(--gunmetal-purple);
     --secondary-text: var(--slate-grey);

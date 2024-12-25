@@ -3,6 +3,8 @@ import React, { useState, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 
 
+// TODO: get cookie theme and conditionally style the QR generator if light
+
 const QRCodeGenerator: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [qrCodeValue, setQrCodeValue] = useState<string>("");
