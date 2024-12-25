@@ -34,7 +34,7 @@ export default function Projects() {
           <div className="flex flex-col gap-3">
             <h3 className="font-ibmPlexSerif text-sm text-primaryText">QR Code Generator</h3>
             <p className="text-xs leading-relaxed text-secondaryText">
-            A simple tool to generate QR codes. Enter a URL, click "Generate," and you&apos;re good to go.
+            A simple tool to generate QR codes. Enter a URL, click generate, and you&apos;re good to go.
             </p>
             <QRCodeGenerator />
           </div>
