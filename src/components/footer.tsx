@@ -1,6 +1,7 @@
 import React from "react";
 import NavLinks from "./nav-links";
-// import SocialIcons from "./social-icons";
+
+// TODO: Make a contact me link/form 
 
 const Footer: React.FC = () => {
   return (

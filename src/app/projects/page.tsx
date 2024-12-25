@@ -16,27 +16,27 @@ export default function Projects() {
           {/* What's cookin' & intro */}
            <div className="flex flex-col gap-3">
             <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold">What&apos;s cookin&apos;</h1>
-            <p>
-              I am a dedicated and detail-oriented Web Developer with expertise in both front and back-end development. With a background in Digital Marketing Technology and a minor in Computer Science, I combine technical knowledge with marketing insight to deliver web solutions that are not only functional but also optimized for performance and SEO.
+            <p className="text-sm leading-relaxed text-primaryText">
+            Here’s where I keep the things I’ve been working on — projects from the past (coming soon) and ideas I’m currently exploring. It’s all about continuous learning, growing, and building along the way.
             </p>
           </div>
 
           {/* Tools */}
           <div className="flex flex-col gap-3"> 
             <h2 className="font-ibmPlexSerif text-xl text-primaryText">Tools</h2>
-            <p>
-              I thrive in collaborative environments, consistently working cross-functionally to ensure projects are delivered on time and to a high standard.
+            <p className="text-xs leading-relaxed text-secondaryText">
+            These are tools I’ve put together to address everyday challenges. They’re built with usability in mind and designed to make life just a little bit easier.
             </p>
           </div>
 
 
           {/* QR Generator */}
           <div className="flex flex-col gap-3">
-            <h3 className="font-ibmPlexSerif text-xl text-primaryText">QR Code Generator</h3>
-            <QRCodeGenerator />
-            <p>
-              I am adept at adapting to new tools and technologies, which enables me to remain competitive in Sdynamic work environments. My skill set is complemented by strong interpersonal attributes such as adaptability, self-motivation, and emotional intelligence, making me a reliable and accountable team member.
+            <h3 className="font-ibmPlexSerif text-sm text-primaryText">QR Code Generator</h3>
+            <p className="text-xs leading-relaxed text-secondaryText">
+            A simple tool to generate QR codes. Enter a URL, click "Generate," and you’re good to go.
             </p>
+            <QRCodeGenerator />
           </div>
 
         </div>

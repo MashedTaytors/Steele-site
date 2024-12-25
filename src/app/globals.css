@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* TODO: add --tertiary-text color for both themes and modify text colors */
 :root {
   font-size: 16px;
     --font-ibm-plex-serif: "IBM Plex Serif", serif;
@@ -13,6 +14,7 @@
     --slate-grey: #58546b;
     --muted-periwinkle: #807cb1;
     --lavender-grey: #ada1c5;
+    --soft-amethyst: #ccc0d8;
     --pale-lilac: #d3cade;
     --misty-rose: #ede7ea;
     --gunmetal-purple:#19161f;
@@ -46,7 +48,7 @@
   --button: #000;
   --button-text: #FFF;
   --foreground: var(--misty-rose);
-    --secondary-text: var(--pale-lilac);
+    --secondary-text: var(--soft-amethyst);
     --icons: var(--muted-periwinkle);
     --background-gradient: linear-gradient(
       to bottom,

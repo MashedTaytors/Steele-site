@@ -16,24 +16,24 @@ export default function Home() {
         <div className="flex flex-col gap-4 w-full md:w-1/2">
         {/* div containing headers */}
           <div className="flex flex-col gap-4"> 
-            <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold md:text-3xl lg:text-4xl">Taylor Steele</h1>
-            <h2 className="text-xl font-sourceCodePro text-primaryText md:text-2xl">Dynamic Web Professional</h2>
+            <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold lg:text-3xl">Taylor Steele</h1>
+            <h2 className="text-xl font-sourceCodePro text-primaryText">Dynamic Web Professional</h2>
           </div>
         {/* Links */}
           <div>
-          <Link href="/projects/" className="text-secondaryText font-ibmPlexSerif"> Projects</Link>
+          <Link href="/projects/" className="text-secondaryText text-base font-sourceCodePro"> Projects</Link>
           </div>
         </div>
 
       {/* Content */}
         <div className="flex flex-col gap-3 leading-relaxed text-base font-sourceCodePro text-secondaryText w-full md:w-1/2">
-          <p>
+          <p className="text-xs leading-relaxed text-secondaryText">
             I am a dedicated and detail-oriented Web Developer with expertise in both front and back-end development. With a background in Digital Marketing Technology and a minor in Computer Science, I combine technical knowledge with marketing insight to deliver web solutions that are not only functional but also optimized for performance and SEO.
           </p>
-          <p>
+          <p className="text-xs leading-relaxed text-secondaryText">
             I thrive in collaborative environments, consistently working cross-functionally to ensure projects are delivered on time and to a high standard.
           </p>
-          <p>
+          <p className="text-xs leading-relaxed text-secondaryText">
             I am adept at adapting to new tools and technologies, which enables me to remain competitive in Sdynamic work environments. My skill set is complemented by strong interpersonal attributes such as adaptability, self-motivation, and emotional intelligence, making me a reliable and accountable team member.
           </p>
         
