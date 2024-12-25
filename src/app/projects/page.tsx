@@ -15,7 +15,7 @@ export default function Projects() {
         >
           {/* What's cookin' & intro */}
            <div className="flex flex-col gap-3">
-            <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold">What's cookin'</h1>
+            <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold">What&apos;s cookin&apos;</h1>
             <p>
               I am a dedicated and detail-oriented Web Developer with expertise in both front and back-end development. With a background in Digital Marketing Technology and a minor in Computer Science, I combine technical knowledge with marketing insight to deliver web solutions that are not only functional but also optimized for performance and SEO.
             </p>
