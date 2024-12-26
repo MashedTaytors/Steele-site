@@ -37,9 +37,9 @@ const QRCodeGenerator: React.FC = () => {
   return (
     <div className="flex flex-col h-72 w-full justify-between rounded-lg bg-transparent border border-solid border-gray-500 border-opacity-40 lg:flex-row">
       <div className="flex flex-col gap-2 p-8">
-        <label className="font-sourceCodePro"> Enter QR destination:</label>
+        <label className="font-sourceCodePro text-sm"> Enter QR destination:</label>
         <input
-          className="p-3 w-full rounded-md border border-white border-opacity-40 bg-transparent font-sourceCodePro focus:outline-none focus:border-opacity-100 lg:w-72"
+          className="p-2 w-full rounded-md border border-white border-opacity-40 bg-transparent font-sourceCodePro focus:outline-none focus:border-opacity-100 lg:w-72"
           type="url"
           placeholder="Enter URL"
           value={inputValue}

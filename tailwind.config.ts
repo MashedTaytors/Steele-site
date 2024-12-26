@@ -10,10 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        paleLilac: "var(--pale-lilac)",
+
+        // tokens
         background: "var(--background)",
         foreground: "var(--foreground)",
+
         buttonBg: "var(--button-bg-color)",
         buttonText: "var(--button-text-color)",
+
+        inputBorder: "var(input-border-color)",
+
         primaryText: "var(--primary-text)",
         secondaryText: "var(--secondary-text)",
         tertiaryText: "var(--tertiary-text)",

@@ -16,8 +16,8 @@
     --lavender-grey: #ada1c5;
     --soft-amethyst: #ccc0d8;
     --pale-lilac: #d3cade;
-    --misty-rose: #ede7ea;
-    --gunmetal-purple:#19161f;
+    --misty-rose: #f8f4fc;
+    --gunmetal-purple:#15111b;
 
   /* Tokens */
   --primary-text: var(--foreground);
@@ -34,9 +34,9 @@
     --icons: var(--slate-grey);
     --background-gradient: linear-gradient(
       to bottom, 
-      rgba(237, 231, 234, 0) 0%, 
-      rgba(255, 255, 255, 0.1) 56%, 
-      rgba(255, 255, 255, 0.2) 100%
+      rgba(236, 221, 250, 0) 0%, 
+      rgba(236, 221, 250, 0.1) 56%, 
+      rgba(236, 221, 250, 0.4) 100%
       /* rgba(218, 166, 155, 0) 0%, 
       rgba(218, 166, 155, 0.05) 56%, 
       rgba(218, 166, 155, 0.15) 100% */
