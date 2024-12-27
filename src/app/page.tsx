@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
+    <>
       <main className="flex flex-col flex-grow w-content gap-16 lg:gap-8">
         <div className="flex flex-col gap-4 items-start justify-between py-16 md:flex-row">
         {/* Headings and Nav */}
@@ -67,8 +68,9 @@ export default function Home() {
 
           </div>
         </div>
-        
-        <Footer />
       </main>
+      
+      <Footer />
+    </>
   );
 }

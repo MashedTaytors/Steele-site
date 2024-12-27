@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" data-theme={theme}>
       <head>
       </head>
-      <body className={`${ibmPlexSerif.variable} ${sourceCodePro.variable} antialiased min-h-screen flex flex-col w-full items-center`}>
+      <body className={`${ibmPlexSerif.variable} ${sourceCodePro.variable} antialiased min-h-screen flex flex-col w-full flex-grow items-center`}>
           {children}
       </body>
     </html>

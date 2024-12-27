@@ -21,7 +21,7 @@ export default function ProjectsSidebar(): JSX.Element {
     const pathname = usePathname();
 
     return (
-        <div className="flex flex-col w-full border-gray-500 border-opacity-40 gap-2 h-32 border-b md:w-1/4 md:min-h-screen md:border-r md:border-b-0">
+        <div className="flex flex-col w-full border-gray-500 border-opacity-40 gap-2 h-32 border-b md:w-1/4 md:min-h-[calc(100vh-4rem)] md:border-r md:border-b-0">
             {links.map((link) => {
                 return (
                     <Link

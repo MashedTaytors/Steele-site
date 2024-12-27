@@ -7,7 +7,7 @@ import ProjectsSidebar from "@/components/projects-sidebar";
 export default async function ProjectsLayout({ children }: { children: React.ReactNode }) {
 
   return (
-    <main className="flex flex-col flex-grow w-content gap-0">
+    <main className="flex flex-col flex-grow w-content">
       <Header />
       <div className="flex flex-col gap-16 py-8 md:flex-row">
         <ProjectsSidebar />
