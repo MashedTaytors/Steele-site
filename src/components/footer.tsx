@@ -1,17 +1,20 @@
 import React from "react";
-import NavLinks from "./nav-links";
+import SocialIcons from "./social-icons";
+import Link from "next/link";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 // TODO: Make a contact me link/form 
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex w-full justify-center py-16">
-      <div className="flex w-content">
-       {/* <SocialIcons /> */}
-       <NavLinks />
-        {/* empty column for layout */}
-        <div className="lg:w-1/2"></div>
+    <footer className="flex w-full justify-start py-16">
+      <div className="md:w-1/3">
+        <SocialIcons />
       </div>
+        {/* empty column for layout */}
+        <div className="flex justify-end md:w-2/3">
+        <Link href="/projects/" className="text-secondaryText text-base font-sourceCodePro">Projects <ArrowForwardIcon /></Link>
+        </div>
     </footer>
   );
 };

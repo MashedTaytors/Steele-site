@@ -1,7 +1,5 @@
 import { IBM_Plex_Serif, Source_Code_Pro } from "next/font/google";
 import { cookies } from 'next/headers';
-import Header from "@/components/header";
-// import Footer from "@/components/footer";
 import "./globals.css";
 
 const ibmPlexSerif = IBM_Plex_Serif({
@@ -32,11 +30,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
       </head>
       <body className={`${ibmPlexSerif.variable} ${sourceCodePro.variable} antialiased min-h-screen flex flex-col w-full items-center`}>
-      <Header />
-        <main className="flex flex-col flex-grow w-content gap-16 lg:gap-8">
           {children}
-        </main>
-      {/* <Footer /> */}
       </body>
     </html>
   );
