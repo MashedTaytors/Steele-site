@@ -82,6 +82,5 @@ const QRCodeGenerator: React.FC = () => {
   );
 };
 
-// TODO: Don't let users add non-URLs (maybe validate URLs)
 
 export default QRCodeGenerator;

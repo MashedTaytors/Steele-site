@@ -27,7 +27,7 @@ function ThemeToggle() {
     if (cookieTheme) {
       setTheme(cookieTheme); // Use the cookie theme if it exists
     } else {
-      setTheme('light'); // Default theme if no cookie exists
+      setTheme('dark'); // Default theme if no cookie exists
     }
   }, []);
 
@@ -43,17 +43,17 @@ function ThemeToggle() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   //  console.log('Client-side theme cookie:', theme); // TODO: Debounce this
   };
 
 
   return (
     <button onClick={toggleTheme} aria-label="Toggle theme">
-      {theme === 'light' ? (
-        <DarkModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
+      {theme === 'dark' ? (
+       <LightModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
       ) : (
-        <LightModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
+        <DarkModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
       )}
     </button>
   );

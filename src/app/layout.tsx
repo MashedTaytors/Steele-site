@@ -21,7 +21,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // Access cookies during SSR
   const cookieStore = await cookies();
   // Log the cookie value to the server console
-  const theme = cookieStore.get('theme')?.value || 'light'; // Default to 'light' if cookie is not present
+  const theme = cookieStore.get('theme')?.value || 'dark'; // Default to 'light' if cookie is not present
 
   console.log('Server-side theme cookie:', theme);
 

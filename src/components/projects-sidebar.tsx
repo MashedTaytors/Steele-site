@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-// TODO: make stack on mobile 
-
 const links = [
     {
         name: 'Projects',
@@ -31,7 +29,7 @@ export default function ProjectsSidebar(): JSX.Element {
                             'flex grow items-start text-secondaryText justify-start gap-2 rounded-md text-sm font-medium hover:text-buttonText md:flex-none ',
                             {
                                 'text-secondaryText font-sourceCodePro': pathname === link.href, // styling for active link
-                                'text-xl text-primaryText font-bold font-ibmPlexSerif': link.name === 'Projects', // Add larger font for "Projects"
+                                'text-xl text-primaryText font-bold font-ibmPlexSerif': link.name === 'Projects',
                             },
                         )}
                     >
