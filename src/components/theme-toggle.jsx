@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { useCookieConsent } from '@/app/context/cookie-consent-context';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 // TODO: on light theme full page load, the wrong toggle icon flashes
+// TODO: Hide theme toggle if no cookie consent is given
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
@@ -20,27 +22,24 @@ function setCookie(name, value, days) {
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(''); // Initialize with an empty string to prevent overwrites
+  const { consent } = useCookieConsent();
 
-  // Set theme based on the cookie during the first render
   useEffect(() => {
-    const cookieTheme = getCookie('theme');
-    if (cookieTheme) {
-      setTheme(cookieTheme); // Use the cookie theme if it exists
-    } else {
-      setTheme('dark'); // Default theme if no cookie exists
-    }
+    const cookieTheme = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('theme='))
+      ?.split('=')[1];
+
+    const htmlTheme = document.documentElement.dataset.theme;
+    setTheme(cookieTheme || htmlTheme || 'dark');
   }, []);
 
-  // Update cookie and DOM only when the theme changes
   useEffect(() => {
-    if (theme) { // Only act if the theme has been initialized
-      const cookieTheme = getCookie('theme');
-      if (cookieTheme !== theme) {
-        setCookie('theme', theme, 30); // Only set the cookie if the theme differs
-      }
-      document.documentElement.dataset.theme = theme; // Sync theme to the DOM
+    if (consent.preferences) {
+      setCookie('theme', theme, 30);
     }
-  }, [theme]);
+    document.documentElement.dataset.theme = theme;
+  }, [theme, consent.preferences]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));

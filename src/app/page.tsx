@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Footer from "@/components/footer";
+import SkillBadge from "@/components/badges/badges";
 
 
 export const metadata: Metadata = {
@@ -55,12 +56,12 @@ export default function Home() {
                     {/* libray, .com(x2), .org(x2), support(x2), ncpa  */}
                     {/* TODO: make components for this section */}
                     <ul className="flex flex-row flex-wrap gap-2">
-                      <li className="flex items-center rounded-full bg-paleLilac px-2.5 py-0.5 text-xs font-medium leading-5 font-sourceCodePro text-[#1f223e]"> HTML &amp; CSS </li>
-                      <li className="flex items-center rounded-full bg-paleLilac px-2.5 py-0.5 text-xs font-medium leading-5 font-sourceCodePro text-[#1f223e]"> JavaScript </li>
-                      <li className="flex items-center rounded-full bg-paleLilac px-2.5 py-0.5 text-xs font-medium leading-5 font-sourceCodePro text-[#1f223e]"> PHP </li>
-                      <li className="flex items-center rounded-full bg-paleLilac px-2.5 py-0.5 text-xs font-medium leading-5 font-sourceCodePro text-[#1f223e]"> WordPress </li>
-                      <li className="flex items-center rounded-full bg-paleLilac px-2.5 py-0.5 text-xs font-medium leading-5 font-sourceCodePro text-[#1f223e]"> GraphQL </li>
-                      <li className="flex items-center rounded-full bg-paleLilac px-2.5 py-0.5 text-xs font-medium leading-5 font-sourceCodePro text-[#1f223e]"> React.js </li>
+                      <SkillBadge> HTML &amp; CSS </SkillBadge>
+                      <SkillBadge> JavaScript </SkillBadge>
+                      <SkillBadge> PHP </SkillBadge>
+                      <SkillBadge> WordPress </SkillBadge>
+                      <SkillBadge> GraphQL </SkillBadge>
+                      <SkillBadge> React.js </SkillBadge>
                     </ul>
 
                   </div>
