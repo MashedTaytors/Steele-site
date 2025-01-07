@@ -19,7 +19,7 @@ export default function Home() {
           {/* div containing headers */}
             <div className="flex flex-col gap-4"> 
               <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold lg:text-3xl">Taylor Steele</h1>
-              <h2 className="text-lg font-sourceCodePro text-secondaryText"> Software Engineer</h2>
+              <h2 className="text-lg font-sourceCodePro text-secondaryText"> Software Developer</h2>
             </div>
           </div>
 

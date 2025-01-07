@@ -5,7 +5,6 @@ import { useCookieConsent } from '@/app/context/cookie-consent-context';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-// Utility functions to get and set cookies
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -19,19 +18,20 @@ function setCookie(name, value, days) {
 }
 
 function ThemeToggle() {
-  const [theme, setTheme] = useState(''); // Initialize with an empty string
-  const { consent } = useCookieConsent(); // Context providing consent status
+  const [theme, setTheme] = useState('');
+  const { consent, triggerPopup } = useCookieConsent();
 
-  // Determine initial theme from cookie or document's data-theme
   useEffect(() => {
     if (consent.preferences) {
       const cookieTheme = getCookie('theme');
       const htmlTheme = document.documentElement.dataset.theme;
-      setTheme(cookieTheme || htmlTheme || 'dark'); // Default to 'dark' if nothing is set
+      setTheme(cookieTheme || htmlTheme || 'dark');
+    } else {
+      const htmlTheme = document.documentElement.dataset.theme;
+      setTheme(htmlTheme || 'dark');
     }
   }, [consent.preferences]);
 
-  // Update cookie and document's theme when theme changes and consent is granted
   useEffect(() => {
     if (consent.preferences && theme) {
       setCookie('theme', theme, 30);
@@ -41,15 +41,13 @@ function ThemeToggle() {
     }
   }, [theme, consent.preferences]);
 
-  // Toggle theme between 'dark' and 'light'
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+    if (!consent.preferences) {
+      triggerPopup(); // Show the popup for consent
+    } else {
+      setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+    }
   };
-
-  // Hide the button if consent is not granted
-  if (!consent.preferences) {
-    return null;
-  }
 
   return (
     <button onClick={toggleTheme} aria-label="Toggle theme">
