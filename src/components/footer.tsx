@@ -7,7 +7,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex w-full justify-center py-16">
+    <footer className="flex w-full justify-center py-16 mb-24">
       <div className="flex flex-row w-content">
         <div className="w-2/3 md:w-1/3">
           <SocialIcons />

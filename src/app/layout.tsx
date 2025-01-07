@@ -1,12 +1,14 @@
 import { IBM_Plex_Serif, Source_Code_Pro } from "next/font/google";
-import { cookies } from 'next/headers';
+import { cookies } from "next/headers";
 import "./globals.css";
+import CookieConsent from "@/components/cookie-consent";
+import { CookieConsentProvider } from "./context/cookie-consent-context";
 
 const ibmPlexSerif = IBM_Plex_Serif({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-ibm-plex-serif",
-  display: "swap", //swap the css versions of the font with the next/font version - this allows for tailwind declaration
+  display: "swap",
 });
 
 const sourceCodePro = Source_Code_Pro({
@@ -16,21 +18,29 @@ const sourceCodePro = Source_Code_Pro({
   display: "swap",
 });
 
-
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // Access cookies during SSR
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // Resolve the cookies() Promise and access the theme cookie
   const cookieStore = await cookies();
-  // Log the cookie value to the server console
-  const theme = cookieStore.get('theme')?.value || 'dark'; // Default to 'light' if cookie is not present
+  const theme = cookieStore.get("theme")?.value || "dark";
 
-  console.log('Server-side theme cookie:', theme);
+  console.log("Server-side theme cookie:", theme);
 
   return (
     <html lang="en" data-theme={theme}>
-      <head>
-      </head>
-      <body className={`${ibmPlexSerif.variable} ${sourceCodePro.variable} antialiased min-h-screen flex flex-col w-full flex-grow items-center`}>
+      <head />
+      <body
+        className={`${ibmPlexSerif.variable} ${sourceCodePro.variable} antialiased min-h-screen flex flex-col w-full flex-grow items-center`}
+      >
+        <CookieConsentProvider>
           {children}
+
+          {/* Cookie Consent Popup */}
+          <CookieConsent />
+        </CookieConsentProvider>
       </body>
     </html>
   );
