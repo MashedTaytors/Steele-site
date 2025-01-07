@@ -9,10 +9,10 @@ const links = [
         name: 'Projects',
         href: '/projects/'
     }
-    //, {
-    //     name: 'QR Code Generator',
-    //     href: '/projects/qr-generator'
-    // },
+    , {
+        name: 'Ethan Reed for Eau Claire City Council',
+        href: '/projects/ethan-reed-campaign'
+    },
 ];
 
 export default function ProjectsSidebar(): JSX.Element {
