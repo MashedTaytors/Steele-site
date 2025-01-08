@@ -8,9 +8,9 @@ const links = [
     {
         name: 'Projects',
         href: '/projects/'
-    }
-    , {
-        name: 'Ethan Reed for Eau Claire City Council',
+    },
+    {
+        name: 'Ethan Reed for Eau Claire',
         href: '/projects/ethan-reed-campaign'
     },
 ];
@@ -21,15 +21,20 @@ export default function ProjectsSidebar(): JSX.Element {
     return (
         <div className="flex flex-col w-full border-gray-500 border-opacity-40 gap-2 h-32 border-b md:w-1/4 md:min-h-[calc(100vh-4rem)] md:border-r md:border-b-0">
             {links.map((link) => {
+                const isActive = pathname.startsWith(link.href);
+
                 return (
                     <Link
                         key={link.name}
                         href={link.href}
                         className={clsx(
-                            'flex grow items-start text-secondaryText justify-start gap-2 rounded-md text-sm font-medium hover:text-buttonText md:flex-none ',
+                            'flex grow items-start justify-start gap-2 rounded-md text-sm font-medium hover:text-buttonText md:flex-none',
                             {
-                                'text-secondaryText font-sourceCodePro': pathname === link.href, // styling for active link
+                                // Ensure "Projects" has ibmPlexSerif always
                                 'text-xl text-primaryText font-bold font-ibmPlexSerif': link.name === 'Projects',
+                                // Other links use sourceCodePro with active state handled
+                                'text-secondaryText font-sourceCodePro': link.name !== 'Projects' && !isActive,
+                                'text-secondaryText font-sourceCodePro font-bold': link.name !== 'Projects' && isActive,
                             },
                         )}
                     >
