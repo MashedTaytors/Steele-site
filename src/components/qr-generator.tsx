@@ -8,6 +8,9 @@ import { QRCodeCanvas } from "qrcode.react";
 const QRCodeGenerator: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [qrCodeValue, setQrCodeValue] = useState<string>("");
+  const [fgColor, setFgColor] = useState<string>("#000000"); // Default foreground color: black
+  const [bgColor, setBgColor] = useState<string>("#ffffff"); // Default background color: white
+  const [showColorOptions, setShowColorOptions] = useState<boolean>(false); // Toggle for color options
   const qrCodeRef = useRef<HTMLDivElement>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
 
@@ -44,7 +47,40 @@ const QRCodeGenerator: React.FC = () => {
           placeholder="Enter URL"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleGenerateQRCode()}
         />
+                {/* Toggle Color Options */}
+                <button
+          onClick={() => setShowColorOptions(!showColorOptions)}
+          className="text-secondaryText underline text-sm text-left"
+        >
+          {showColorOptions ? "Hide Color Options" : "Modify Colors"}
+        </button>
+
+        {/* Color Options */}
+        {showColorOptions && (
+          
+          <div className="flex flex-row gap-4 my-3">
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-foreground">Foreground Color:</label>
+              <input
+                type="color"
+                value={fgColor}
+                onChange={(e) => setFgColor(e.target.value)}
+                className="cursor-pointer"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-foreground">Background Color:</label>
+              <input
+                type="color"
+                value={bgColor}
+                onChange={(e) => setBgColor(e.target.value)}
+                className="cursor-pointer"
+              />
+            </div>
+          </div>
+        )}
         <br />
         <button
           className="px-4 py-2 font-sourceCodePro cursor-pointer bg-buttonBg text-buttonText rounded-md"
@@ -63,6 +99,9 @@ const QRCodeGenerator: React.FC = () => {
             <QRCodeCanvas
               value={qrCodeValue}
               size={160}
+              fgColor={fgColor} // Apply foreground color
+              bgColor={bgColor} // Apply background color
+              style={{ margin: "20px" }}
             />
           )}
         </div>
