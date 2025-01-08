@@ -60,25 +60,43 @@ const QRCodeGenerator: React.FC = () => {
         {/* Color Options */}
         {showColorOptions && (
           
-          <div className="flex flex-row gap-4 my-3">
+          <div className="flex flex-col gap-4 my-3">
             <div className="flex flex-col gap-2">
               <label className="text-sm text-foreground">Foreground Color:</label>
-              <input
-                type="color"
-                value={fgColor}
-                onChange={(e) => setFgColor(e.target.value)}
-                className="cursor-pointer"
-              />
+                <div className="flex flex-row gap-4">
+                  <input
+                    type="color"
+                    value={fgColor}
+                    onChange={(e) => setFgColor(e.target.value)}
+                    className="cursor-pointer"
+                  />
+                    <input
+                      type="text"
+                      value={fgColor}
+                      onChange={(e) => setFgColor(e.target.value)}
+                      placeholder="#000000"
+                      className="p-1.5 border rounded-md text-sm w-24 bg-transparent border-solid border-gray-500 "
+                    />
+                </div>
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-sm text-foreground">Background Color:</label>
-              <input
-                type="color"
-                value={bgColor}
-                onChange={(e) => setBgColor(e.target.value)}
-                className="cursor-pointer"
-              />
-            </div>
+              <div className="flex flex-row gap-4">
+                <input
+                  type="color"
+                  value={bgColor}
+                  onChange={(e) => setBgColor(e.target.value)}
+                  className="cursor-pointer "
+                />
+                  <input
+                    type="text"
+                    value={bgColor}
+                    onChange={(e) => setBgColor(e.target.value)}
+                    placeholder="#ffffff"
+                    className="p-1.5 border rounded-md text-sm w-24 bg-transparent border-solid border-gray-500 "
+                  />
+              </div>
+             </div>
           </div>
         )}
         <br />
