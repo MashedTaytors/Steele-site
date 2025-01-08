@@ -62,7 +62,7 @@ const QRCodeGenerator: React.FC = () => {
           
           <div className="flex flex-col gap-4 my-3">
             <div className="flex flex-col gap-2">
-              <label className="text-sm text-foreground">Foreground Color:</label>
+              <label className="text-sm text-foreground">Foreground:</label>
                 <div className="flex flex-row gap-4">
                   <input
                     type="color"
@@ -80,7 +80,7 @@ const QRCodeGenerator: React.FC = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-sm text-foreground">Background Color:</label>
+              <label className="text-sm text-foreground">Background:</label>
               <div className="flex flex-row gap-4">
                 <input
                   type="color"
