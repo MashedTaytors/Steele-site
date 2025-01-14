@@ -24,6 +24,9 @@ const config: Config = {
         primaryText: "var(--primary-text)",
         secondaryText: "var(--secondary-text)",
         tertiaryText: "var(--tertiary-text)",
+
+        success: "var(--success)",
+        fail: "var(--fail)",
       },
       width: {
         'content': 'min(1200px, 90%)',

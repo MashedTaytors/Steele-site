@@ -4,11 +4,25 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* TODO: add --tertiary-text color for both themes and modify text colors */
-/* TODO: Background transition is slower than button transition */
+
 :root {
   font-size: 16px;
     --font-ibm-plex-serif: "IBM Plex Serif", serif;
     --font-source-code-pro: "Source Code Pro", sans-serif;
+
+
+/* Colors not yet added that will need to be tokens:
+dark mode:
+  borders #7c7a82
+  focus-border #fff
+
+
+light mode:
+  borders 
+  focus border #000
+
+
+ */
 
   /* Primitave colors */
     --midnight-indigo: #1f223e;
@@ -24,6 +38,9 @@
   --primary-text: var(--foreground);
   --button-bg-color: var(--button);
   --button-text-color: var(--button-text);
+  --success: var(--green);
+  --fail: var(--red);
+
 }
 
 [data-theme="light"] { /* all colors */
@@ -33,6 +50,8 @@
   --foreground: var(--gunmetal-purple);
     --secondary-text: var(--slate-grey);
     --icons: var(--slate-grey);
+    --green: #035F05;
+    --red: #A80006;
     --background-gradient: linear-gradient(
       to bottom, 
       rgba(236, 221, 250, 0) 0%, 
@@ -51,6 +70,8 @@
   --foreground: var(--misty-rose);
     --secondary-text: var(--soft-amethyst);
     --icons: var(--muted-periwinkle);
+    --green: #12CE90;
+    --red: #FF9799;
     --background-gradient: linear-gradient(
       to bottom,
       rgba(128, 124, 177, 0) 0%,
