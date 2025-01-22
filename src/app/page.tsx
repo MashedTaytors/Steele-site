@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import Footer from "@/components/footer";
-import SkillBadge from "@/components/badges/badges";
+import Footer from "@/components/Footer";
+import SkillBadge from "@/components/badges/Badges";
 
 
 export const metadata: Metadata = {
@@ -18,12 +18,12 @@ export default function Home() {
           <div className="flex flex-col gap-4 w-full md:w-1/2">
           {/* div containing headers */}
             <div className="flex flex-col gap-4"> 
-              <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold lg:text-3xl">Taylor Steele</h1>
-              <h2 className="text-lg font-sourceCodePro text-secondaryText"> Software Developer</h2>
+              <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold lg:text-5xl">Taylor Steele</h1>
+              <h2 className="text-lg font-sourceCodePro text-secondaryText lg:text-2xl"> Software Developer</h2>
             </div>
           </div>
 
-          <div className="flex flex-col gap-8 w-full md:w-1/2">
+          <div className="flex flex-col gap-8 w-full md:w-1/2 lg:mt-1">
           {/* Content */}
             <div className="flex flex-col gap-4 leading-relaxed text-base font-sourceCodePro text-secondaryText">
               <p className="text-sm leading-relaxed text-secondaryText">
