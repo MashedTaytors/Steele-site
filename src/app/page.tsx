@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Footer from "@/components/footer";
-import SkillBadge from "@/components/badges/Badges";
+import SkillBadge from "@/components/badges/badges";
 
 
 export const metadata: Metadata = {
