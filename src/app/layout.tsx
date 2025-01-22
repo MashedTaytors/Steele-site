@@ -1,7 +1,7 @@
 import { IBM_Plex_Serif, Source_Code_Pro } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
-import CookieConsent from "@/components/CookieConsent";
+import CookieConsent from "@/components/cookie-consent";
 import { CookieConsentProvider } from "./context/cookie-consent-context";
 
 const ibmPlexSerif = IBM_Plex_Serif({

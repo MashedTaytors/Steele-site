@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import SkillBadge from "@/components/badges/Badges";
 
 

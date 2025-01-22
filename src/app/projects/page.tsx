@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import QRCodeGenerator from "@/components/QRGenerator";
+import QRCodeGenerator from "@/components/qr-generator";
 
 export const metadata: Metadata = {
   title: "Projects | Taylor Steele",

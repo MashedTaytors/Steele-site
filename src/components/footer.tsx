@@ -1,5 +1,5 @@
 import React from "react";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "./social-icons";
 import Link from "next/link";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 

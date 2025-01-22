@@ -1,8 +1,8 @@
 import React from "react";
-import ThemeToggle from "./ThemeToggle/ThemeToggle";
-import GitHub from "./svgs/GitHub";
-import CodePen from "./svgs/Codepen";
-import LinkedIn from "./svgs/LinkedIn";
+import ThemeToggle from "./theme-toggle/ThemeToggle";
+import GitHub from "./svgs/github";
+import CodePen from "./svgs/codepen";
+import LinkedIn from "./svgs/linkedin";
 
 export default function SocialIcons({ width = 24, height = 24, fontSize = 30}) {
   return (

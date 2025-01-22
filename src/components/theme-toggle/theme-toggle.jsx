@@ -53,9 +53,9 @@ function ThemeToggle({ fontSize = 30 }) {
   return (
     <button onClick={toggleTheme} aria-label="Toggle theme">
       {theme === 'dark' ? (
-        <LightModeIcon className={styles.icon} style={{ fontSize: `${fontSize}px` }} />
+        <LightModeIcon title="Theme Toggle" className={styles.icon} style={{ fontSize: `${fontSize}px` }} />
       ) : (
-        <DarkModeIcon className={styles.icon} style={{ fontSize: `${fontSize}px` }} />
+        <DarkModeIcon title="Theme Toggle" className={styles.icon} style={{ fontSize: `${fontSize}px` }} />
       )}
     </button>
   );
