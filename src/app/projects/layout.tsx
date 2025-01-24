@@ -1,7 +1,7 @@
 
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import "./../globals.css";
-import ProjectsSidebar from "@/components/projects-sidebar";
+import ProjectsSidebar from "@/components/ProjectsSidebar";
 
 
 export default async function ProjectsLayout({ children }: { children: React.ReactNode }) {

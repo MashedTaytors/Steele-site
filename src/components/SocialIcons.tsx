@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeToggle from "./theme-toggle/theme-toggle";
+import ThemeToggle from "./ThemeToggle/ThemeToggle";
 import GitHub from "./svgs/GitHub";
 import CodePen from "./svgs/Codepen";
 import LinkedIn from "./svgs/LinkedIn";
