@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./icons.module.css";
+import styles from "./Icons.module.css";
 
 
 export default function LinkedIn({ width = 24, height = 24 }) {
