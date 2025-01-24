@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useCookieConsent } from '@/app/context/cookie-consent-context';
+import styles from './ThemeToggle.module.css';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -17,7 +18,7 @@ function setCookie(name, value, days) {
   document.cookie = `${name}=${value}; expires=${expires}; path=/; sameSite=lax; secure=${process.env.NODE_ENV === 'production'}`;
 }
 
-function ThemeToggle() {
+function ThemeToggle({ fontSize = 30 }) {
   const [theme, setTheme] = useState('');
   const { consent, triggerPopup } = useCookieConsent();
 
@@ -52,9 +53,9 @@ function ThemeToggle() {
   return (
     <button onClick={toggleTheme} aria-label="Toggle theme">
       {theme === 'dark' ? (
-        <LightModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
+        <LightModeIcon title="Theme Toggle" className={styles.icon} style={{ fontSize: `${fontSize}px` }} />
       ) : (
-        <DarkModeIcon style={{ fontSize: '30px', color: 'var(--icons)' }} />
+        <DarkModeIcon title="Theme Toggle" className={styles.icon} style={{ fontSize: `${fontSize}px` }} />
       )}
     </button>
   );
