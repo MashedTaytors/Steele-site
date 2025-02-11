@@ -7,14 +7,14 @@ export const metadata: Metadata = {
 };
 
 
-export default function Projects() {
+export default function Reed() {
   return (
       <div className="flex flex-col items-start justify-between gap-8">
           <div className="flex flex-col gap-8 leading-relaxed font-sourceCodePro text-secondaryText w-full"
           >
             {/* What's cookin' & intro */}
             <div className="flex flex-col gap-3">
-              <h1 className="text-2xl font-ibmPlexSerif text-primaryText font-semibold">Ethan Reed for Eau Claire</h1>
+              <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold">Ethan Reed for Eau Claire</h1>
               <p className="text-sm leading-relaxed text-primaryText">
               Ethan Reed, a close friend from college, is running for a seat on the Eau Claire City Council. As part of his campaign, I&apos;ve been assisting him in developing a WordPress site to showcase his platform and vision for the community.
               </p>

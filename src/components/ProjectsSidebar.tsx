@@ -10,6 +10,10 @@ const links = [
         href: '/projects/'
     },
     {
+        name: 'Contributions at Nagios',
+        href: '/projects/contributions-at-nagios'
+    },
+    {
         name: 'Ethan Reed for Eau Claire',
         href: '/projects/ethan-reed-campaign'
     },

@@ -45,6 +45,10 @@ const config: Config = {
         ibmPlexSerif: ["var(--font-serif)", "serif"],
         sourceCodePro: ["var(--font-mono)", "monospace"],
       },
+      backgroundImage: {
+        'subtleRadialForeground': 'radial-gradient(circle, transparent 90%, var(--color-foreground) 5%)',
+
+     },
     },
   },
   plugins: [],

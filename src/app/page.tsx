@@ -53,8 +53,7 @@ export default function Home() {
                     <p className="text-xs text-secondaryText leading-normal mb-1 font-sourceCodePro">
                       Developed 4 websites, managed 8, built a headless WordPress site with Faust.js, and improved website health by 39% with technical SEO fixes.
                     </p> 
-                    {/* libray, .com(x2), .org(x2), support(x2), ncpa  */}
-                    {/* TODO: make components for this section */}
+                  
                     <ul className="flex flex-row flex-wrap gap-2">
                       <SkillBadge> HTML &amp; CSS </SkillBadge>
                       <SkillBadge> JavaScript </SkillBadge>
