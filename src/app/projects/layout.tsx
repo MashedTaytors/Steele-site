@@ -3,15 +3,18 @@ import Header from "@/components/Header";
 import "./../globals.css";
 import ProjectsSidebar from "@/components/ProjectsSidebar";
 
+// TODO: make more responsive
+
 
 export default async function ProjectsLayout({ children }: { children: React.ReactNode }) {
 
   return (
-    <main className="flex flex-col flex-grow w-content">
+    <main className="w-content">
       <Header />
-      <div className="flex flex-col gap-16 py-8 md:flex-row">
+      <div>
         <ProjectsSidebar />
-        <div className="w-full md:w-3/4">
+        <div className="fixed w-content ml-0 top-56 pt-8 pr-3 h-screen overflow-y-scroll md:ml-72 md:top-16 md:w-[584px] lg:w-[800px] lg:ml-[376px]">
+
           {children}
         </div>
       </div>

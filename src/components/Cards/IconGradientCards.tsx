@@ -17,7 +17,7 @@ const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description })
       <div className="flex flex-row justify-between items-center w-full cursor-pointer"  onClick={() => setIsOpen(!isOpen)}>
 
         {/* icon and title/subtitle */}
-        <div className="flex flex-row items-center justify-center gap-3">
+        <div className="flex flex-row items-center justify-center gap-3 text-mutedPeriwinkle">
           {icon}
 
           {/* title and subtitle */}

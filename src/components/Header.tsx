@@ -5,7 +5,7 @@ import SocialIcons from "./SocialIcons";
 
 const Header = () => {
     return (
-        <header className="flex flex-row justify-center w-full max-h-16">
+        <header className="flex flex-row justify-center w-full max-h-16 sticky top-0 z-50 ">
             <div className="flex flex-row justify-between w-full border-b border-gray-500 border-opacity-40">
                 {/* left header */}
                 <Link href={"/"} className="flex flex-row h-16 items-center justify-center text-2xl font-ibmPlexSerif text-primaryText font-semibold"> Taylor Steele </Link>

@@ -1,8 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
 import Accordions from "@/components/Accordion";
-import IconGradientCard from "@/components/Cards/IconGradientCards";
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import DevelopmentSection from "./components/DevelopmentSection";
+import DesignSection from "./components/DesignSection";
+import BackendSection from "./components/BackendSection";
+import PerformanceSection from "./components/PerformanceSection";
 
 export const metadata: Metadata = {
   title: "Contributions at Nagios | Taylor Steele",
@@ -115,28 +117,13 @@ export default function Nagios() {
         </div>
 
         <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-
-        {/* Development & Optimization */}
-        <div className="flex flex-col gap-6 w-full">
-          <div className="flex flex-col gap-3">
-            <h3 className="font-ibmPlexSerif text-lg text-primaryText">
-              Development & Optimization
-            </h3>
-            <p className="text-sm leading-relaxed text-secondaryText">
-              Developed responsive, modular, and dynamic web solutions to
-              streamline updates, enhance user interactions, and improve content
-              discoverability.
-            </p>
-          </div>
-        </div>
-
-        <IconGradientCard
-          icon={<PhoneIphoneIcon className="w-10 h-10" />}
-          title="Responsive Development"
-          subtitle="Flexible layouts"
-          description="Built fully responsive pages using WordPress and Elementor, ensuring consistent user experiences across desktop, tablet, and mobile devices."
-        />
-
+        <DevelopmentSection />
+        <hr className=" border-gray-500 border-opacity-40 w-1/3" />
+        <DesignSection />
+        <hr className=" border-gray-500 border-opacity-40 w-1/3" />
+        <BackendSection />
+        <hr className=" border-gray-500 border-opacity-40 w-1/3" />
+        <PerformanceSection />
       </div>
     </div>
   );
