@@ -1,7 +1,20 @@
 import React from "react";
 import IconGradientCard from "@/components/Cards/IconGradientCards";
 
-export default function PageSection({ title, description, cards }) {
+type CardProps = {
+  icon: JSX.Element;
+  title: string;
+  subtitle: string;
+  description: string;
+};
+
+type PageSectionProps = {
+  title: string;
+  description: string;
+  cards: CardProps[];
+};
+
+export default function PageSection({ title, description, cards }: PageSectionProps) {
   return (
     <>
       <div className="flex flex-col gap-6 w-full">
