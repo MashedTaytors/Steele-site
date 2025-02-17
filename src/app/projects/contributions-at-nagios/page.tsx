@@ -1,10 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import Accordions from "@/components/Accordion";
-import DevelopmentSection from "./components/DevelopmentSection";
-import DesignSection from "./components/DesignSection";
-import BackendSection from "./components/BackendSection";
-import PerformanceSection from "./components/PerformanceSection";
+import ModernizationSection from "./components/ModenizationSection";
+import UnreleasedSection from "./components/UnreleasedSection";
 
 export const metadata: Metadata = {
   title: "Contributions at Nagios | Taylor Steele",
@@ -12,68 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Nagios() {
-  const sections = [
-    {
-      title: "support.nagios.com",
-      links: [
-        {
-          label: "Before",
-          url: "https://web.archive.org/web/20220818235149/https://support.nagios.com/",
-        },
-        {
-          label: "Version 1",
-          url: "https://web.archive.org/web/20240805121946/https://support.nagios.com/",
-        },
-        {
-          label: "Version 2",
-          url: "https://web.archive.org/web/20241217213801/https://support.nagios.com/",
-        },
-      ],
-    },
-    {
-      title: "www.nagios.com",
-      links: [
-        {
-          label: "Before",
-          url: "https://web.archive.org/web/20221023012854/https://www.nagios.com/",
-        },
-        {
-          label: "After",
-          url: "https://web.archive.org/web/20241215002432/https://www.nagios.com/",
-        },
-      ],
-    },
-    {
-      title: "www.nagios.org",
-      links: [
-        {
-          label: "Before",
-          url: "https://web.archive.org/web/20221004080704/https://www.nagios.org/",
-        },
-        {
-          label: "Version 1",
-          url: "https://web.archive.org/web/20240919071434/https://www.nagios.org/",
-        },
-        {
-          label: "Version 2",
-          url: "https://web.archive.org/web/20241217184018/https://www.nagios.org/",
-        },
-      ],
-    },
-    {
-      title: "library.nagios.com",
-      links: [
-        {
-          label: "Before",
-          url: "https://web.archive.org/web/20221023012854/https://www.nagios.com/",
-        },
-        {
-          label: "After",
-          url: "https://web.archive.org/web/20250119124607/https://library.nagios.com/",
-        },
-      ],
-    },
-  ];
 
   return (
     <div className="flex flex-col items-center justify-between gap-8">
@@ -95,35 +30,9 @@ export default function Nagios() {
           </p>
         </div>
 
-        {/*Modernization of Nagios Websites - intro */}
-        <div className="flex flex-col gap-3 w-full">
-          <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
-            Modernization of Nagios Websites
-          </h2>
-          <p className="text-base leading-relaxed text-secondaryText">
-            Collaborating with the marketing team, I played a key role in
-            overhauling Nagios&apos; primary websites. Below are links from the
-            Wayback Machine, showcasing project evolution over time:
-          </p>
-          <Accordions sections={sections} />
-          <p className="text-base leading-relaxed text-secondaryText">
-            Facing tight deadlines and evolving requirements, I demonstrated
-            adaptability and technical expertise by developing, optimizing, and
-            maintaining the sites post-launch. My contributions significantly
-            enhanced site health, improved SEO rankings, increased performance
-            metrics, and elevated the overall user experience, driving
-            measurable business value and long-term sustainability.
-          </p>
-        </div>
-
+        <ModernizationSection />
         <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-        <DevelopmentSection />
-        <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-        <DesignSection />
-        <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-        <BackendSection />
-        <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-        <PerformanceSection />
+        <UnreleasedSection />
       </div>
     </div>
   );
