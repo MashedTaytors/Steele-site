@@ -110,8 +110,7 @@ function PerformanceSection() {
 }
 
 export default function ModernizationSection() {
-
-  const sections = [
+  const websites = [
     {
       title: "support.nagios.com",
       links: [
@@ -174,7 +173,6 @@ export default function ModernizationSection() {
     },
   ];
 
-
   return (
     <>
       <div className="flex flex-col gap-3 w-full">
@@ -182,19 +180,10 @@ export default function ModernizationSection() {
           Modernization of Nagios Websites
         </h2>
         <p className="text-base leading-relaxed text-secondaryText">
-          Collaborating with the marketing team, I played a key role in
-          overhauling Nagios&apos; primary websites. Below are links from the
-          Wayback Machine, showcasing project evolution over time:
+        I played a key role in planning and developing the Nagios websites, collaborating closely with marketing, design, and executive teams. While adapting to shifting requirements, my team and I successfully delivered each project within critical deadlines. The result was fully responsive WordPress pages that maintained design accuracy and provided an intuitive user experience.
         </p>
-        <Accordions sections={sections} />
         <p className="text-base leading-relaxed text-secondaryText">
-          Facing tight deadlines and evolving requirements, I demonstrated
-          adaptability and technical expertise by developing, optimizing, and
-          maintaining the sites post-launch. My contributions significantly
-          enhanced site health, improved SEO rankings, increased performance
-          metrics, and elevated the overall user experience, driving measurable
-          business value and long-term sustainability.
-        </p>
+        My time with the company strengthened my skills as a developer, designer, and marketer. I gained a deeper understanding of server vs. client development, UI/UX principles, the nuances of implementation, and much more.</p>
       </div>
 
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />
@@ -205,6 +194,8 @@ export default function ModernizationSection() {
       <BackendSection />
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />
       <PerformanceSection />
+      <hr className=" border-gray-500 border-opacity-40 w-1/3" />
+      <Accordions sections={websites} />
     </>
   );
 }
