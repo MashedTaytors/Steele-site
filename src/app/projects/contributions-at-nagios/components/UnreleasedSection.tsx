@@ -1,51 +1,39 @@
 import React from "react";
 import PageSection from './PageSection';
-import { Casino, Groups, AllInclusive } from '@mui/icons-material';
+import { Tune, DynamicFeed, Update, AllInclusive } from '@mui/icons-material';
 
 function GameSection() {
   const cardsData = [
     {
-      icon: <Casino className="w-10 h-10" />, 
-      title: "Collaborative Game Logic Design", 
-      subtitle: "Seamless link redirection.",
-      description: "Worked closely with the marketing team to outline and define the game’s core mechanics, objectives, and user interactions, ensuring alignment with campaign goals."
-    },
-    {
-      icon: <Groups className="w-10 h-10" />,
-      title: "Cross-Departmental Collaboration", 
-      subtitle: "Unified project teamwork.",
-      description: "Collaborated with marketing, design, and sales teams to gather requirements and tailor the game to meet specific marketing objectives."
-    },
-    {
       icon: <AllInclusive className="w-10 h-10" />,
       title: "End-to-End Development", 
       subtitle: "Full-scope development",
-      description: "Designed and developed the game from scratch using React and Node.js, implementing both frontend functionality and backend logic while managing all aspects of styling, animations, and interactivity."
+      description: "Designed and developed a project from scratch using React and Node.js, implementing both frontend functionality and backend logic while managing all aspects of styling, animations, and interactivity."
     }
   ];
 
-  return <PageSection title="Custom Game with Server-Side Results" description="Utilized React, Node.js, full-stack development, and cross-team collaboration to create a game aligned with marketing goals." cards={cardsData} />;
+  return <PageSection title="Custom Game with Server-Side Results" description="I independently-developed a project focused on marketing goals which involved collaborating with multiple teams and creating a custom API to transmit data from the client to the server." cards={cardsData} />;
 }
 
 function HeadlessSection() {
   const cardsData = [
     {
-      icon: <Casino className="w-10 h-10" />, 
+      icon: <Update className="w-10 h-10" />,
+      title: "Tech Stack Modernization", 
+      subtitle: "Full-scope development",
+      description: "Reviewed and updated major software dependencies within the tech stack by sifting through the package.json file, updating outdated libraries, and ensuring compatibility across all packages to avoid build issues."
+    },
+    {
+      icon: <DynamicFeed className="w-10 h-10" />, 
       title: "Dynamic React Component Development", 
       subtitle: "Seamless link redirection.",
       description: "Developed modular and reusable React components to fetch and display real-time content from the WordPress REST API, ensuring a flexible and dynamic front-end experience."
     },
     {
-      icon: <Groups className="w-10 h-10" />,
+      icon: <Tune className="w-10 h-10" />,
       title: "Optimized GraphQL Configuration", 
       subtitle: "Unified project teamwork.",
       description: "Configured GraphQL queries within the Faust.js environment to enable efficient content fetching, minimizing over-fetching and optimizing data delivery."
-    },
-    {
-      icon: <AllInclusive className="w-10 h-10" />,
-      title: "Tech Stack Modernization", 
-      subtitle: "Full-scope development",
-      description: "Reviewed and updated major software dependencies within the tech stack by sifting through the package.json file, updating outdated libraries, and ensuring compatibility across all packages to avoid build issues."
     }
   ];
 

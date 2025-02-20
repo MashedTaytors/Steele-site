@@ -1,15 +1,15 @@
 import React from "react";
 import Accordions from "@/components/Accordion";
-import { PhoneIphone, FilterAlt, ViewModuleRounded, Code, Brush, FormatLineSpacingRounded, RotateRight, Search, StorageRounded, ContentPasteGoRounded,LoopRounded} from '@mui/icons-material';
+import {FilterAlt, Code, FormatLineSpacingRounded, RotateRight, Search, StorageRounded, ContentPasteGoRounded,LoopRounded} from '@mui/icons-material';
 import PageSection from "./PageSection";
 
 function DevelopmentSection() {
   const cardsData = [
     {
-      icon: <PhoneIphone className="w-10 h-10" />, // Removed extra {}
-      title: "Responsive Development", // Added missing commas
-      subtitle: "Flexible layouts",
-      description: "Built fully responsive pages using WordPress and Elementor, ensuring consistent user experiences across desktop, tablet, and mobile devices."
+      icon: <Search className="w-10 h-10" />,
+      title: "Fuzzy Search Mechanism",
+      subtitle: "Smarter, faster search.",
+      description: "Developed and implemented a fuzzy search mechanism to help users find relevant content efficiently, even with incomplete or misspelled queries."
     },
     {
       icon: <FilterAlt className="w-10 h-10" />,
@@ -17,56 +17,13 @@ function DevelopmentSection() {
       subtitle: "Faster content discovery",
       description: "Integrated dynamic content filtering using custom Elementor widgets and GraphQL API to enhance interactive features, such as the Find a Partner page and content discovery tools."
     },
-    {
-      icon: <ViewModuleRounded className="w-10 h-10" />,
-      title: "Modular Templates",
-      subtitle: "Flexible, scalable designs",
-      description: "Developed and implemented modular templates for streamlined updates and easy maintenance across multiple sites."
-    },
+    ,
     {
       icon: <Code className="w-10 h-10" />,
       title: "Custom Shortcodes",
       subtitle: "Dynamic content simplified",
       description: "Developed shortcodes to dynamically retrieve and render CMS-based content, enabling flexible layouts and streamlined content presentation."
-    }
-  ];
-
-  return <PageSection title="Development & Optimization" description=" Developed responsive, modular, and dynamic web solutions to streamline updates, enhance user interactions, and improve content discoverability." cards={cardsData} />;
-}
-
-function DesignSection() {
-  const cardsData = [
-    {
-      icon: <Brush className="w-10 h-10" />,
-      title: "Design Collaboration",
-      subtitle: "Turning design into experience",
-      description: "Worked closely with the design team to translate mockups into functional web pages, ensuring accurate implementation of intended user interfaces.",
     },
-    {
-      icon: <FormatLineSpacingRounded className="w-10 h-10" />,
-      title: "Standardized UI Elements",
-      subtitle: "Consistent, user-friendly UI",
-      description: "Standardized typography, spacing, and layout elements across multiple sites to maintain a consistent brand experience."
-    },
-    {
-      icon: <RotateRight className="w-10 h-10" />,
-      title: "Post-Launch Site Redesign",
-      subtitle: "Redesigns for business needs",
-      description: "Supported a post-launch site redesign initiative for Nagios.org, implementing changes to reflect an updated visual style and site purpose to align with business goals."
-    },
-    {
-      icon: <Search className="w-10 h-10" />,
-      title: "Fuzzy Search Mechanism",
-      subtitle: "Smarter, faster search.",
-      description: "Developed and implemented a fuzzy search mechanism to help users find relevant content efficiently, even with incomplete or misspelled queries."
-    }
-  ];
-
-  return <PageSection title="Design & User Experience" description=" Collaborated on UI/UX design, standardized visual elements, and implemented interactive features for consistent, engaging, and user-friendly experiences." cards={cardsData} />;
-}
-
-function BackendSection() {
-  const cardsData = [
     {
       icon: <StorageRounded className="w-10 h-10" />,
       title: "Custom Post Types and Data Models",
@@ -81,7 +38,7 @@ function BackendSection() {
     }
   ];
 
-  return <PageSection title="Backend Development" description="Structured efficient backend systems, optimized workflows, and improved collaboration through custom data models and streamlined content management." cards={cardsData} />;
+  return <PageSection title="Development & Optimization" description=" Developed responsive, modular, and dynamic web solutions to streamline updates, enhance user interactions, and improve content discoverability." cards={cardsData} />;
 }
 
 function PerformanceSection() {
@@ -188,10 +145,6 @@ export default function ModernizationSection() {
 
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />
       <DevelopmentSection />
-      <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-      <DesignSection />
-      <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-      <BackendSection />
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />
       <PerformanceSection />
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />

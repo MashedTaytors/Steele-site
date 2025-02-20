@@ -18,6 +18,7 @@ export default function Nagios() {
           <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold">
             Contributions at Nagios
           </h1>
+          <p className="text-base leading-relaxed text-secondaryText">* Due to a non-disclosure agreement, specifics have been withheld.</p>
           <p className="text-base leading-relaxed text-secondaryText">
             As a Web Developer at Nagios, I contributed to the development and
             optimization of multiple web platforms, including websites and
