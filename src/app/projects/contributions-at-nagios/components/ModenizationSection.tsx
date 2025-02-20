@@ -17,7 +17,6 @@ function DevelopmentSection() {
       subtitle: "Faster content discovery",
       description: "Integrated dynamic content filtering using custom Elementor widgets and GraphQL API to enhance interactive features, such as the Find a Partner page and content discovery tools."
     },
-    ,
     {
       icon: <Code className="w-10 h-10" />,
       title: "Custom Shortcodes",
