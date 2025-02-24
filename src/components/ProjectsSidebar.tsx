@@ -10,6 +10,10 @@ const links = [
         href: '/projects/'
     },
     {
+        name: 'Contributions at Nagios',
+        href: '/projects/contributions-at-nagios'
+    },
+    {
         name: 'Ethan Reed for Eau Claire',
         href: '/projects/ethan-reed-campaign'
     },
@@ -19,7 +23,8 @@ export default function ProjectsSidebar(): JSX.Element {
     const pathname = usePathname();
 
     return (
-        <div className="flex flex-col w-full border-gray-500 border-opacity-40 gap-2 h-32 border-b md:w-1/4 md:min-h-[calc(100vh-4rem)] md:border-r md:border-b-0">
+        <div className="flex flex-col w-full justify-center items-center sticky top-20 border-gray-500 border-opacity-40  h-32 border-b md:w-1/3 md:min-h-[calc(100vh-4rem)] md:border-r md:border-b-0 lg:w-1/4">
+        <div className="flex flex-col gap-2 w-content overflow-y-scroll h-full">
             {links.map((link) => {
                 const isActive = pathname.startsWith(link.href);
 
@@ -42,6 +47,7 @@ export default function ProjectsSidebar(): JSX.Element {
                     </Link>
                 );
             })}
+        </div>
         </div>
     );
 }

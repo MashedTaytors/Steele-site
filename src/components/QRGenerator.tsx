@@ -3,9 +3,11 @@ import React, { useState, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import ErrorIcon from '@mui/icons-material/Error';
 
+/*
+TODO: Once a QR has been generated, adjusting background, foreground colors applies directly. - this needs a fix
 
-// TODO: get cookie theme and conditionally style the QR generator if light
-//TODO: Dont' allow bg/fg colors with low contrast
+TODO: When hex box is selected, the # does not automatically apply
+*/
 
 
 // Utility to calculate relative luminance
