@@ -12,7 +12,7 @@ export default function Nagios() {
 
   return (
     <div className="flex flex-col items-center justify-between gap-8">
-      <div className="flex flex-col gap-4 items-center leading-relaxed font-sourceCodePro text-secondaryText w-full">
+      <div className="flex flex-col gap-6 items-center leading-relaxed font-sourceCodePro text-secondaryText w-full">
         {/* Title & intro */}
         <div className="flex flex-col gap-3">
           <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold">

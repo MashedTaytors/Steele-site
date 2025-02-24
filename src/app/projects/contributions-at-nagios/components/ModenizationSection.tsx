@@ -139,7 +139,13 @@ export default function ModernizationSection() {
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />
       <PerformanceSection />
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />
-      <Accordions sections={websites} />
+
+      <div className="flex flex-col gap-3 w-full">
+        <h3 className="font-ibmPlexSerif text-lg text-primaryText" >Representation of Work</h3>
+        <p>Below, you'll find more context on each website overhaul along with Wayback Machine links showcasing the project’s progression. Please note that the Wayback Machine’s capture process may result in significant load time delays, which do not reflect the actual performance of the sites at that time.</p>
+        <p className="text-sm" >* Please note that the Wayback Machine’s capture process may result in significant load time delays, which do not reflect the actual performance of the sites at that time.</p>
+        <Accordions sections={websites} />
+      </div>
     </>
   );
 }

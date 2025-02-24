@@ -42,7 +42,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, links }) => {
     <div className="border-b border-gray-500 border-opacity-40">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left py-2 font-medium text-base flex justify-between items-center"
+        className="w-full text-left py-2 font-medium text-base text-primaryText flex justify-between items-center"
       >
         {title}
       {/* Open/Closed Animated Arrow Icon */}
