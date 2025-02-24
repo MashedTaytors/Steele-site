@@ -15,7 +15,7 @@ function DevelopmentSection() {
       icon: <FilterAlt className="w-10 h-10" />,
       title: "Dynamic Content Filtering",
       subtitle: "Faster content discovery",
-      description: "Integrated dynamic content filtering using custom Elementor widgets and GraphQL API to enhance interactive features, such as the Find a Partner page and content discovery tools."
+      description: "Integrated dynamic content filtering using custom Elementor widgets and GraphQL API to enhance interactive features, such as content discovery tools."
     },
     {
       icon: <Code className="w-10 h-10" />,
@@ -33,11 +33,11 @@ function DevelopmentSection() {
       icon: <ContentPasteGoRounded className="w-10 h-10" />,
       title: "Optimized Content Workflow",
       subtitle: "Faster content updates",
-      description: "Assisted in developing and implementing an optimized content workflow to improve collaboration between content and development teams."
+      description: "Assisted in developing and implementing an optimized content workflow to improve collaboration between content and marketing teams."
     }
   ];
 
-  return <PageSection title="Development & Optimization" description=" Developed responsive, modular, and dynamic web solutions to streamline updates, enhance user interactions, and improve content discoverability." cards={cardsData} />;
+  return <PageSection title="Development & Optimization" description="One of my proactive goals was to empower other teams and departments to manage data relevant to their work. For the marketing team, I standardized UI elements and developed modular templates to streamline updates and maintain brand consistency across multiple sites. For another department, I created a solution, using custom post types and fields which are managed by team members, and that information is then dynamically presented to end users. As a result, the sites are more scalable, easier to maintain, and better aligned with business goals." cards={cardsData} />;
 }
 
 function PerformanceSection() {
@@ -138,8 +138,6 @@ export default function ModernizationSection() {
         <p className="text-base leading-relaxed text-secondaryText">
         I played a key role in planning and developing the Nagios websites, collaborating closely with marketing, design, and executive teams. While adapting to shifting requirements, my team and I successfully delivered each project within critical deadlines. The result was fully responsive WordPress pages that maintained design accuracy and provided an intuitive user experience.
         </p>
-        <p className="text-base leading-relaxed text-secondaryText">
-        My time with the company strengthened my skills as a developer, designer, and marketer. I gained a deeper understanding of server vs. client development, UI/UX principles, the nuances of implementation, and much more.</p>
       </div>
 
       <hr className=" border-gray-500 border-opacity-40 w-1/3" />

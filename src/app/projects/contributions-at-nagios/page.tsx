@@ -20,14 +20,7 @@ export default function Nagios() {
           </h1>
           <p className="text-base leading-relaxed text-secondaryText">* Due to a non-disclosure agreement, specifics have been withheld.</p>
           <p className="text-base leading-relaxed text-secondaryText">
-            As a Web Developer at Nagios, I contributed to the development and
-            optimization of multiple web platforms, including websites and
-            experimental projects. My work focused on implementing modern,
-            scalable solutions within WordPress/Elementor, along with developing
-            prototypes in React-based environments. By collaborating with
-            cross-functional teams, I ensured seamless integrations, performance
-            optimizations, and user-friendly web experiences across all
-            projects.
+          My time with Nagios strengthened my skills as a developer, designer, and marketer. I gained a deeper understanding of server vs. client development, UI/UX principles, the nuances of implementation, and much more.
           </p>
         </div>
 
