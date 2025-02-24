@@ -1,6 +1,6 @@
 import React from "react";
 import Accordions from "@/components/Accordion";
-import {FilterAlt, Code, FormatLineSpacingRounded, RotateRight, Search, StorageRounded, ContentPasteGoRounded,LoopRounded} from '@mui/icons-material';
+import {FilterAlt, Code, FormatLineSpacingRounded, Search, StorageRounded, ContentPasteGoRounded,LoopRounded, HealthAndSafety} from '@mui/icons-material';
 import PageSection from "./PageSection";
 
 function DevelopmentSection() {
@@ -49,13 +49,7 @@ function PerformanceSection() {
       description: "Managed manual URL redirections during migrations using Rank Math SEO, ensuring link continuity, minimizing traffic disruptions, and maintaining SEO performance.",
     },
     {
-      icon: <FormatLineSpacingRounded className="w-10 h-10" />,
-      title: "Performance Optimization",
-      subtitle: "Faster, smoother pages",
-      description: "Enhanced page load times using Google Lighthouse to diagnose and resolve issues, optimizing asset delivery, compressing images, and implementing lazy loading to reduce layout shifts.",
-    },
-    {
-      icon: <RotateRight className="w-10 h-10" />,
+      icon: <HealthAndSafety className="w-10 h-10" />,
       title: "Proactive Site Health Monitoring",
       subtitle: "Reliable site performance",
       description: "Used Screaming Frog to regularly scan for and resolve site issues, including broken links, redirect chains, and missing metadata, maintaining high site health and strong SEO performance."

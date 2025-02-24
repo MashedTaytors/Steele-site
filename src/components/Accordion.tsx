@@ -60,10 +60,10 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, links }) => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.1, ease: "easeInOut" }}
-          className="flex flex-row items-center pl-4 pb-2 gap-4">
+          transition={{ duration: 0.15, ease: "easeInOut" }}
+          className="flex flex-row items-center pl-4 pb-6 gap-4">
             {links.map((link, index) => (
-              <li key={index} className="flex flex-row items-center mt-0">
+              <li key={index} className="flex flex-row items-center mt-0 border rounded-lg border-foreground py-2 px-4">
                 <a
                   href={link.url}
                   target="_blank"
