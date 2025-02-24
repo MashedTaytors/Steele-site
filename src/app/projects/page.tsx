@@ -17,7 +17,7 @@ export default function Projects() {
             <div className="flex flex-col gap-3">
               <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold">What&apos;s cookin&apos;</h1>
               <p className="text-sm leading-relaxed text-primaryText">
-              Here&apos;s where I keep the things I&apos;ve been working on — projects from the past (coming soon) and ideas I&apos;m currently exploring. It&apos;s all about continuous learning, growing, and building along the way.
+              Here&apos;s where I keep the things I&apos;ve been working on — projects from the past and ideas I&apos;m currently exploring. It&apos;s all about continuous learning, growing, and building along the way.
               </p>
             </div>
 
