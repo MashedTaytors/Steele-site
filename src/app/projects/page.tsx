@@ -40,6 +40,7 @@ export default function Projects() {
               <QRCodeGenerator />
             </div>
 
+           {/* Character Counter */}
             <div className="flex flex-col gap-3">
               <h3 className="font-ibmPlexSerif text-sm text-primaryText">Character Counter</h3>
               <p className="text-xs leading-relaxed text-secondaryText">
