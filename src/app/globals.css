@@ -1,11 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 /* Root Variables: Fonts, Colors, and Tokens */
 :root {
   font-size: 16px;
+
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+    ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-track  {
+      border-radius: 6px;
+    }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-icons);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-icon-hover);
+  }
+  
+
 
   /* Font Families */
   --font-serif: "IBM Plex Serif", serif;
@@ -41,37 +60,50 @@
   --color-secondary-text: var(--color-slate-grey);
   --color-icons: var(--color-slate-grey);
   --color-hover-icons: var(--color-muted-periwinkle);
-  --color-green: #035F05;
-  --color-red: #A80006;
+  --color-green: #035f05;
+  --color-red: #a80006;
   --color-background-gradient: linear-gradient(
-    to bottom, 
-    rgba(236, 221, 250, 0) 0%, 
-    rgba(236, 221, 250, 0.1) 56%, 
+    to bottom,
+    rgba(236, 221, 250, 0) 0%,
+    rgba(236, 221, 250, 0.1) 56%,
     rgba(236, 221, 250, 0.4) 100%
   );
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-pale-lilac);
+  }
+
+
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --color-background: #19161f; 
+  --color-background: #19161f;
   --color-button: #000;
-  --color-button-text: #FFF;
+  --color-button-text: #fff;
   --color-foreground: var(--color-misty-rose);
   --color-secondary-text: var(--color-soft-amethyst);
   --color-icons: var(--color-muted-periwinkle);
   --color-hover-icons: var(--color-lavender-mist);
-  --color-green: #12CE90;
-  --color-red: #FF9799;
+  --color-green: #12ce90;
+  --color-red: #ff9799;
   --color-background-gradient: linear-gradient(
     to bottom,
     rgba(128, 124, 177, 0) 0%,
     rgba(128, 124, 177, 0.16) 56%,
     rgba(128, 124, 177, 0.32) 100%
   );
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-slate-grey);
+  }
 }
 
 /* Base Styles */
-html, body {
+html,
+body {
   color: var(--color-foreground);
   background: var(--color-background);
   background-image: var(--color-background-gradient);
@@ -83,7 +115,12 @@ html, body {
 
 /* Utility Classes */
 .shimmer-text {
-  background: linear-gradient(90deg, var(--color-primary-text), var(--color-secondary-text), #E0BCAD);
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-text),
+    var(--color-secondary-text),
+    #e0bcad
+  );
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
