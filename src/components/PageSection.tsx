@@ -1,6 +1,9 @@
 import React from "react";
 import IconGradientCard from "@/components/Cards/IconGradientCards";
 
+// Page section with icon cards 
+// TODO: refine
+
 type CardProps = {
   icon: JSX.Element;
   title: string;
