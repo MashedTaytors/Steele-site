@@ -22,7 +22,7 @@ export default function CookieConsent() {
 
   return (
     showPopup && !consent.preferences && ( 
-      <div className="fixed flex justify-center bottom-0 left-0 right-0 bg-background text-foreground py-8">
+      <div className="sticky flex w-full justify-center bottom-0 left-0 right-0 bg-background text-foreground py-8">
         <div className="flex flex-row flex-wrap w-content justify-between gap-6">
           <div className="flex items-center flex-row gap-3">
             <CookieIcon /> 
