@@ -23,8 +23,8 @@ export default function ProjectsSidebar(): JSX.Element {
     const pathname = usePathname();
 
     return (
-        <div className="flex flex-col w-full justify-start items-start sticky top-20 border-gray-500 border-opacity-40  min-h-[calc(100vh-4rem)] border-b md:w-1/3 md:min-h-[calc(100vh-5rem)] md:border-r md:border-b-0 lg:w-1/4">
-        <div className="flex flex-col gap-2 w-content h-full"> 
+        <div className="flex flex-col w-screen ml-[-2.25rem] pl-9 justify-start items-start sticky top-0 pt-20 pb-6 border-gray-500 border-opacity-40 border-b backdrop-blur-md md:ml-0 md:pl-0 md:w-1/3 md:min-h-[calc(100vh-5rem)] md:pt-24 md:border-r md:border-b-0 lg:w-1/4">
+        <div className="flex flex-col gap-2 h-full"> 
             {/* hover:overflow-y-scroll once there are more nav items */}
             {links.map((link) => {
                 const isActive = pathname.startsWith(link.href);

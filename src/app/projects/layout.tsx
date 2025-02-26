@@ -13,7 +13,7 @@ export default async function ProjectsLayout({ children }: { children: React.Rea
       <Header />
       <div className="flex flex-col items-start w-content md:flex-row md:justify-between">
         <ProjectsSidebar />
-        <div className="mt-24 pt-6 pr-3 pb-48 md:pl-6 md:mt-16 md:w-2/3 lg:w-3/4">
+        <div className="mt-12 pr-3 pb-48 md:pt-8 md:pl-6 md:mt-16 md:w-2/3 lg:w-3/4">
           {children}
         </div>
       </div>
