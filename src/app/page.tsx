@@ -28,6 +28,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-8 w-full lg:w-1/2 lg:mt-1">
           {/* Content */}
+          {/* TODO: move education content down and put experience first */}
             <div className="flex flex-col gap-4 leading-relaxed text-base font-sourceCodePro text-secondaryText">
               <p className="text-sm leading-relaxed text-secondaryText">
                In 2022, I graduated from the University of Wisconsin - Stout with a B.S. in Digital Marketing Technology and minored in Computer Science. My degree fused technical knowledge with marketing insights, enabling me to deliver optimized solutions that are goal-aligned.
