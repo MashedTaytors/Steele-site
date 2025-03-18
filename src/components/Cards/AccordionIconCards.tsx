@@ -10,7 +10,7 @@ interface CardProps {
   description: string;
 }
 
-const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description }) => {
+const AccordionIconCard: FC<CardProps> = ({ icon, title, subtitle, description }) => {
     const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col border border-gray-500 border-opacity-40 w-full rounded-lg py-6 px-4 items-start gap-3 hover:shadow-md transition-shadow duration-300">
@@ -54,4 +54,4 @@ const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description })
   );
 };
 
-export default IconGradientCard;
+export default AccordionIconCard;

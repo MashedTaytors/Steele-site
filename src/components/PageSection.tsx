@@ -1,5 +1,5 @@
 import React from "react";
-import IconGradientCard from "@/components/Cards/IconGradientCards";
+import AccordionIconCard from "@/components/Cards/AccordionIconCards";
 
 // Page section with icon cards 
 // TODO: refine
@@ -29,7 +29,7 @@ export default function PageSection({ title, description, cards }: PageSectionPr
 
       <div className="flex flex-row w-full flex-wrap gap-6">
         {cards.map((card, index) => (
-          <IconGradientCard
+          <AccordionIconCard
             key={index}
             icon={card.icon}
             title={card.title}
