@@ -2,7 +2,7 @@ import React from "react";
 import AccordionIconCard from "@/components/Cards/AccordionIconCards";
 
 // Page section with icon cards 
-// TODO: refine
+// TODO: refine 
 
 type CardProps = {
   icon: JSX.Element;
