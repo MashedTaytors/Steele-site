@@ -18,12 +18,12 @@ export default function Reed() {
             Ethan Reed for Eau Claire
           </h1>
           <p className="text-sm leading-relaxed text-primaryText">
-            Ethan Reed, a close friend from college, is running for a seat on
-            the Eau Claire City Council. As part of his campaign, I developed a
+            Ethan Reed, a fellow alumnus of the University of Wisconsin - Stout, is running for a seat on
+            the Eau Claire City Council. I joined his campaign as the Web & Brand Development Manager, where I designed and implemented a
             multimedia marketing strategy to showcase his platform and vision
             for the community. This included establishing a consistent brand
             identity, creating designs for both digital and print media, and
-            building a WordPress site to highlight his campaign&apos;s message.
+            building the <a href="https://ethandreed.com/" target="_blank"  className="text-primaryText font-semibold hover:underline" >Ethan Reed For City Council</a> website to highlight his campaign&apos;s message.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function Reed() {
           <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
             Designing the Brand
           </h2>
-          <p className="text-xs leading-relaxed text-secondaryText">
+          <p className="text-xs leading-relaxed">
             I worked with Ethan to create a logo, color palette, typography
             heirarchy, and some overarching rules for the brand.
           </p>
@@ -67,7 +67,7 @@ export default function Reed() {
             The Palette &amp; Typography
           </h3>
           <p className="text-xs leading-relaxed text-secondaryText">
-           I created some guides for future use on the campaign and to ensure consistency. The section below features the color palette ang typography scale for the campaign. The set-up of the palette is intended to convey the color balance used throughout the brand. 
+           I created guides for future use on the campaign to ensure consistency. The section below features the color palette and typography scale for the campaign's brand. The layout of the palette is intended to convey the color balance used throughout the brand. 
           </p>
          <div className="bg-slateGrey rounded-lg p-4">
           <Image
@@ -77,6 +77,15 @@ export default function Reed() {
             height={393}
             priority
           />
+          {/* Digital Media */}
+            {/* possibly look into this as an option: https://vercel.com/blog/building-a-fast-animated-image-gallery-with-next-js */}
+            <h3 className="font-ibmPlexSerif text-lg text-primaryText">
+            Print Designs
+            </h3>
+            <p className="text-xs leading-relaxed text-secondaryText">
+              literature for door knocking, postcards, business cards, and yard signs
+            </p>
+          {/* Print Media */}
   
           </div>
         </div>
