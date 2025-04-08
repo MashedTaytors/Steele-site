@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 export default function Nagios() {
 
   return (
-    <div className="flex flex-col items-center justify-between gap-8">
       <div className="flex flex-col gap-6 items-center leading-relaxed font-sourceCodePro text-secondaryText w-full">
         {/* Title & intro */}
         <div className="flex flex-col gap-3">
@@ -28,6 +27,5 @@ export default function Nagios() {
         <hr className=" border-gray-500 border-opacity-40 w-1/3" />
         <UnreleasedSection />
       </div>
-    </div>
   );
 }
