@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Reed() {
   return (
-    <div className="flex flex-col gap-6 items-center  leading-relaxed font-sourceCodePro text-secondaryText w-full">
+    <div className="flex flex-col gap-6 items-center leading-relaxed font-sourceCodePro text-secondaryText w-full">
       {/* Title & intro */}
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-ibmPlexSerif text-primaryText font-semibold">
@@ -35,9 +35,8 @@ export default function Reed() {
         </p>
       </div>
 
-      <hr className=" border-gray-500 border-opacity-40 w-1/3" />
       {/* Designing the brand */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 w-full">
         <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
           Designing the Brand
         </h2>
@@ -51,6 +50,7 @@ export default function Reed() {
         <p className="text-base leading-relaxed text-secondryText">
         Before beginning website development, I designed mock-ups in Figma for various devices to allow for design reviews ahead of implementation, ultimately streamlining the process. Once approved, I built reusable patterns in WordPress and developed a child theme to maintain consistent styling.
         </p>
+
         <h3 className="font-ibmPlexSerif text-lg text-primaryText">
           A People-first Logo
         </h3>
