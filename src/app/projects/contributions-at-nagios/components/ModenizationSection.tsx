@@ -129,7 +129,7 @@ export default function ModernizationSection() {
         <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
           Modernization of Nagios Websites
         </h2>
-        <p className="text-base leading-relaxed text-secondaryText">
+        <p className="text-sm leading-relaxed text-secondaryText">
         I played a key role in planning and developing the Nagios websites, collaborating closely with marketing, design, and executive teams. While adapting to shifting requirements, my team and I successfully delivered each project within critical deadlines. The result was fully responsive WordPress pages that maintained design accuracy and provided an intuitive user experience.
         </p>
       </div>
@@ -142,8 +142,8 @@ export default function ModernizationSection() {
 
       <div className="flex flex-col gap-3 w-full">
         <h3 className="font-ibmPlexSerif text-lg text-primaryText" >Representation of Work</h3>
-        <p>Below, you&apos;ll find more context on each website overhaul along with Wayback Machine links showcasing the project&apos;s progression.</p>
-        <p className="text-sm" >* Please note that the Wayback Machine&apos;s capture process may result in significant load time delays, which do not reflect the actual performance of the sites at that time.</p>
+        <p className="text-sm leading-relaxed text-secondaryText">Below, you&apos;ll find more context on each website overhaul along with Wayback Machine links showcasing the project&apos;s progression.</p>
+        <p className="text-xs" >* Please note that the Wayback Machine&apos;s capture process may result in significant load time delays, which do not reflect the actual performance of the sites at that time.</p>
         <Accordions sections={websites} />
       </div>
     </>

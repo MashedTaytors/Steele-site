@@ -40,21 +40,21 @@ export default function Reed() {
         <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
           Designing the Brand
         </h2>
-        <p className="text-base leading-relaxed text-secondaryText">
+        <p className="text-sm leading-relaxed text-secondaryText">
           I worked with Ethan to create a logo, color palette, typography
           heirarchy, and some overarching rules for the brand. The brand was
           designed to bring patriotic energy while keeping the roots in Eau
           Claire.
         </p>
 
-        <p className="text-base leading-relaxed text-secondryText">
+        <p className="text-sm leading-relaxed text-secondryText">
         Before beginning website development, I designed mock-ups in Figma for various devices to allow for design reviews ahead of implementation, ultimately streamlining the process. Once approved, I built reusable patterns in WordPress and developed a child theme to maintain consistent styling.
         </p>
 
         <h3 className="font-ibmPlexSerif text-lg text-primaryText">
           A People-first Logo
         </h3>
-        <p className="text-xs leading-relaxed text-secondaryText">
+        <p className="text-sm leading-relaxed text-secondaryText">
           The logo for light backgrounds the “Clear Water Revival” by Mike Berge{" "}
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
@@ -80,7 +80,7 @@ export default function Reed() {
         <h3 className="font-ibmPlexSerif text-lg text-primaryText">
           The Palette &amp; Typography
         </h3>
-        <p className="text-xs leading-relaxed text-secondaryText">
+        <p className="text-sm leading-relaxed text-secondaryText">
           I created guides for future use on the campaign to ensure consistency.
           The section below features the color palette and typography scale for
           the campaign&apos;s brand. The layout of the palette is intended to
@@ -103,14 +103,14 @@ export default function Reed() {
         <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
           Print Designs
         </h2>
-        <p className="text-base leading-relaxed text-secondaryText">
+        <p className="text-sm leading-relaxed text-secondaryText">
           I collaborated with Ethan to create all of the printed literature for
           the campaign, including political walk cards, postcards, and yard
           signs. Our goal was to keep information consice and skimmable, while
           providing potential voters an easy path to learn more about the
           campaign.
         </p>
-        <p className="text-base leading-relaxed text-secondaryText">
+        <p className="text-sm leading-relaxed text-secondaryText">
           Once I recieved the approved text from Ethan, I shifted it into
           different formats to meet campaign needs.
         </p>
