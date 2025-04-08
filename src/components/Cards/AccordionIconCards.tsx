@@ -10,7 +10,7 @@ interface CardProps {
   description: string;
 }
 
-const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description }) => {
+const AccordionIconCard: FC<CardProps> = ({ icon, title, subtitle, description }) => {
     const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col border border-gray-500 border-opacity-40 w-full rounded-lg py-6 px-4 items-start gap-3 hover:shadow-md transition-shadow duration-300">
@@ -19,6 +19,7 @@ const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description })
         {/* icon and title/subtitle */}
         <div className="flex flex-row items-center justify-center gap-3 text-mutedPeriwinkle">
           {icon}
+           {/* TODO: All of my icons have className="w-10 h-10"  apply this here*/}
 
           {/* title and subtitle */}
           <div className="flex flex-col">
@@ -32,7 +33,7 @@ const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description })
           animate={{ rotate: isOpen ? 180 : 0 }} // Rotate animation
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-         <KeyboardArrowDown className="text-secondaryText w-8 h-8" /> 
+         <KeyboardArrowDown fontSize="inherit"  className="text-secondaryText w-8 h-8" /> 
         </motion.div>
       </div>
 
@@ -54,4 +55,4 @@ const IconGradientCard: FC<CardProps> = ({ icon, title, subtitle, description })
   );
 };
 
-export default IconGradientCard;
+export default AccordionIconCard;
