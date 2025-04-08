@@ -3,8 +3,6 @@ import Header from "@/components/Header";
 import "./../globals.css";
 import ProjectsSidebar from "@/components/ProjectsSidebar";
 
-// TODO: make more responsive
-
 
 export default async function ProjectsLayout({ children }: { children: React.ReactNode }) {
 

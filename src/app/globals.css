@@ -58,6 +58,7 @@
   --color-button-text: #000;
   --color-foreground: var(--color-gunmetal-purple);
   --color-secondary-text: var(--color-slate-grey);
+  --color-tertiary-text: #2C2A38;
   --color-icons: var(--color-slate-grey);
   --color-hover-icons: var(--color-muted-periwinkle);
   --color-green: #035f05;
@@ -84,6 +85,7 @@
   --color-button-text: #fff;
   --color-foreground: var(--color-misty-rose);
   --color-secondary-text: var(--color-soft-amethyst);
+  --color-tertiary-text: #E5E0EC;
   --color-icons: var(--color-muted-periwinkle);
   --color-hover-icons: var(--color-lavender-mist);
   --color-green: #12ce90;
