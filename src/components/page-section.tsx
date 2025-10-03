@@ -1,5 +1,5 @@
 import React from "react";
-import AccordionIconCard from "@/components/Cards/AccordionIconCards";
+import AccordionIconCard from "@/components/cards/accordion-icon-cards";
 
 // Page section with icon cards 
 // TODO: refine 

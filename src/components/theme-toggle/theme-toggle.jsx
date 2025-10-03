@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useCookieConsent } from '@/app/context/cookie-consent-context';
-import styles from './ThemeToggle.module.css';
+import styles from './theme-toggle.module.css';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 

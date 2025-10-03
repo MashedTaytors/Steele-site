@@ -1,7 +1,7 @@
 import React from "react";
-import Accordions from "@/components/Accordion";
+import Accordions from "@/components/accordion";
 import {FilterAlt, Code, Search, StorageRounded, ContentPasteGoRounded,LoopRounded, HealthAndSafety} from '@mui/icons-material';
-import PageSection from "../../../../components/PageSection";
+import PageSection from "../../../../components/page-section";
 
 function DevelopmentSection() {
   const cardsData = [

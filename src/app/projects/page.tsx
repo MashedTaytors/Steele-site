@@ -1,11 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
-import QRCodeGenerator from "./components/QRGenerator";
-import CharacterCounter from "./components/CharacterCounter";
+import QRCodeGenerator from "./components/qr-generator";
+import CharacterCounter from "./components/character-counter";
 
 export const metadata: Metadata = {
   title: "Projects | Taylor Steele",
-  description: "See past, prestent, and future project notes here and get access to some quick tools to make life a bit easier",
+  description: "See past, present, and future project notes here and get access to some quick tools to make life a bit easier",
 };
 
 

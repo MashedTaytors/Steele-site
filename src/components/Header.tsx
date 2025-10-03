@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import Link from 'next/link';
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "./social-icons";
 
 const Header = () => {
     return (

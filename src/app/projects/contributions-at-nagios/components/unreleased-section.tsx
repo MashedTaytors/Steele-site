@@ -1,5 +1,5 @@
 import React from "react";
-import PageSection from '../../../../components/PageSection';
+import PageSection from '../../../../components/page-section';
 import { Tune, DynamicFeed, Update, AllInclusive } from '@mui/icons-material';
 
 function GameSection() {

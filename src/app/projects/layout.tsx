@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
+import Header from "@/components/header";
 import "./../globals.css";
-import ProjectsSidebar from "@/components/ProjectsSidebar";
+import ProjectsSidebar from "@/components/projects-sidebar";
 
 export default async function ProjectsLayout({
   children,

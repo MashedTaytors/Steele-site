@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import Footer from "@/components/Footer";
-import SkillBadge from "@/components/Badges/Badges";
+import Footer from "@/components/footer";
+import SkillBadge from "@/components/badges/badges";
 import Link from "next/link";
 
 
@@ -45,7 +45,7 @@ export default function Home() {
             {/* Experience */}
             <div className="flex flex-col mt-6">
               {/* Nagios */}
-              <a  href="https://www.nagios.com" target="_blank" rel="noreferrer noopener" aria-label="Web Developer at Nagios (opens in a new tab)">
+              <a  href="/projects/contributions-at-nagios" target="_blank" rel="noreferrer noopener" aria-label="Web Developer at Nagios (opens in a new tab)">
                 <div className="flex flex-col p-4 gap-2 rounded-lg lg:flex-row lg:gap-0 hover:bg-gray-400 hover:bg-opacity-10 ">
                   {/* Timeline */}
                   <div className="flex flex-col lg:w-1/4">

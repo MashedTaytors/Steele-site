@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import ModernizationSection from "./components/ModenizationSection";
-import UnreleasedSection from "./components/UnreleasedSection";
+import ModernizationSection from "./components/modernization-section";
+import UnreleasedSection from "./components/unreleased-section";
 
 export const metadata: Metadata = {
   title: "Contributions at Nagios | Taylor Steele",
