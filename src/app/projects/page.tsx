@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import QRCodeGenerator from "./components/qr-generator";
 import CharacterCounter from "./components/character-counter";
+import styles from "./page.module.css"
 
 export const metadata: Metadata = {
   title: "Projects | Taylor Steele",
@@ -32,7 +33,7 @@ export default function Projects() {
 
 
             {/* QR Generator */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 ">
             <h3 className="font-ibmPlexSerif text-lg text-primaryText">QR Code Generator</h3>
               <p className="text-sm leading-relaxed text-secondaryText">
               Enter a URL, click generate, and you&apos;re good to go. Personalize the background and foreground colors while keeping contrast in mind for accessibility

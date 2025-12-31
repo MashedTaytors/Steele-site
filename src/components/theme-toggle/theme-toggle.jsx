@@ -45,6 +45,7 @@ function ThemeToggle({ fontSize = 30 }) {
   const toggleTheme = () => {
     if (!consent.preferences) {
       triggerPopup(); // Show the popup for consent
+      alert("Please accept cookies");
     } else {
       setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
     }

@@ -26,7 +26,7 @@ export default function CookieConsent() {
         <div className="flex flex-row flex-wrap w-content justify-between gap-6">
           <div className="flex items-center flex-row gap-3">
             <CookieIcon /> 
-            <p>I use cookies to remember your theme preference (like light or dark mode). No tracking, no funny business.</p>
+            <p>I use cookies to remember your theme preference (like light or dark mode)</p>
           </div>
           <div className="flex flex-row gap-6">
             <button onClick={handleAccept} className="bg-paleLilac text-black px-4 py-2 rounded-md">
