@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import CrawlerDashboard from "./components/crawler-dashboard";
 
 export const metadata: Metadata = {
   title: "Crawlee Web Crawler | Taylor Steele",
@@ -21,6 +22,20 @@ export default function CrawleeWebCrawler() {
           scalable solution for extracting data from websites while respecting
           robots.txt and rate limiting.
         </p>
+      </div>
+
+      {/* Configuration Dashboard */}
+      <div className="flex flex-col gap-3 w-full">
+        <h2 className="font-ibmPlexSerif text-2xl text-primaryText">
+          Configuration Dashboard
+        </h2>
+        <p className="text-sm leading-relaxed text-secondaryText">
+          Configure your web crawler settings below. Adjust start URLs, crawling limits,
+          data selectors, and advanced options to customize your scraping workflow.
+        </p>
+        <div className="rounded-lg border border-gray-500 border-opacity-40 bg-transparent p-6">
+          <CrawlerDashboard />
+        </div>
       </div>
 
       {/* Overview */}

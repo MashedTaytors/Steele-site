@@ -17,10 +17,10 @@ const links = [
         name: 'Ethan Reed for Eau Claire',
         href: '/projects/ethan-reed-campaign'
     },
-    // {
-    //     name: 'Crawlee Web Crawler',
-    //     href: '/projects/crawlee-web-crawler'
-    // },
+    {
+        name: 'Crawlee Web Crawler',
+        href: '/projects/crawlee-web-crawler'
+    },
 ];
 
 export default function ProjectsSidebar(): JSX.Element {
